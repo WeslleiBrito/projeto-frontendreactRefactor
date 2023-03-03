@@ -5,12 +5,12 @@ export const Filters = (props) => {
     return (
         <ContainerFilters>
             <Title>Filtros</Title>
-            <Ticket htmlFor="minimum-filter">Filtro Mínimo:</Ticket>
-            <TextBox id="minimum-filter" />
-            <Ticket htmlFor="maximum-filter">Filtro Máximo:</Ticket>
-            <TextBox id="maximum-filter" />
-            <Ticket htmlFor="find-name">Buscar por nome:</Ticket>
-            <TextBox id="find-name" />
+            <Ticket htmlFor="minValue">Filtro Mínimo:</Ticket>
+            <TextBox id="minValue" onChange={props.onChangeSetFilters} />
+            <Ticket htmlFor="maxValue">Filtro Máximo:</Ticket>
+            <TextBox id="maxValue" onChange={props.onChangeSetFilters} />
+            <Ticket htmlFor="nameProduct">Buscar por nome:</Ticket>
+            <TextBox id="nameProduct" onChange={props.onChangeSetFilters} />
         </ContainerFilters>
     )
 }

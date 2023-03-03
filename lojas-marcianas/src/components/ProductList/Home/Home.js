@@ -19,8 +19,9 @@ export const Home = (props) => {
                 <Lable>Quantidade de Produtos:</Lable>
                 <DivSelectionOrdination>
                     <Lable htmlFor='ordination'>Ordenação:</Lable>
-                    <SelectOrdination id='ordination' onChange={props.onClickSetProducts}>
-                        <option value={'crescent'} >Crescente</option>
+                    <SelectOrdination id='ordination' value={props.order} onChange={props.onChangeValueSelect}>
+                        <option value={''} disabled>Selecione</option>
+                        <option value={'crescent'}>Crescente</option>
                         <option value={'decrescent'} >Decrescente</option>
                     </SelectOrdination>
                 </DivSelectionOrdination>

@@ -52,7 +52,7 @@ export const productsStock = [
 
     {
         id: 6,
-        name: 'camiseta astronauta sorvete sorvete astronauta',
+        name: 'Camiseta astronauta sorvete sorvete astronauta',
         value: 69.9,
         imageUrl: ['https://www.dhresource.com/webp/m/0x0/f2/albu/g8/M00/BA/F7/rBVaVFxBkX6AKKE3AAP53O9WRuE019.jpg',
             'https://www.dhresource.com/webp/m/0x0/f2/albu/g10/M01/D8/B3/rBVaVlwrLPaAYfB6AAG8_OvsOws677.jpg',
