@@ -1,13 +1,16 @@
 import { Items } from "../Items/Items"
-import { Title, Text, ContainerCart } from "./cartStyle"
+import { Title, Text, ContainerCart, List } from "./cartStyle"
 
 
-export const Cart = () => {
+export const Cart = ({cart}) => {
     return (
         <ContainerCart>
             <Title>Carrinho</Title>
-            <Items quantity={2} nameProduct={"x Produto 1"} />
-            <Items quantity={2} nameProduct={"x Produto 2"} />
+
+            <List>
+                { cart.map((product, index) => <Items key={product.id} quantity={product.quantity} nameProduct={product.name} unitaryValue={product.value} amount={product.amount} id={index}/>)}
+            </List>
+
             <Text>Valor total: R$</Text>
         </ContainerCart>
     )

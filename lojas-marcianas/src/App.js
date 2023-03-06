@@ -15,20 +15,15 @@ function App() {
     maxValue: '',
     nameProduct: ''
   })
-
   const [filteredProducts, setFilteredProducts] = useState([...productsStock])
   const [orderedProducts, setOrderedProducts] = useState([...productsStock])
   const [order, setOrder] = useState('')
+  const [cart, setCart] = useState([])
 
-  /* 1 - Filter: A função de filtar é dividida em duas etapas
-         1º Coleta de dados usando o evento onChage, do meu elemento jsx que representa um select html
-   
- */
   const onChangeSetFilters = (event) => {
     const key = event.target.id
     setFilters({ ...filters, [key]: event.target.value })
   }
-
 
   useEffect(() => {
 
@@ -70,12 +65,36 @@ function App() {
     setOrder(event.target.value)
   }
 
+  const onClickAddCart = (event) => {
+   
+    let item = productsStock.find(item => {
+      return item.id === Number(event.target.id)
+    })
+
+    if(item){
+
+      if(!cart.find(product => product.id === item.id)){
+        item = {...item, quantity: 1, amount: item.value}
+        setCart([...cart, item])
+      }else{
+        const index = cart.findIndex(product => product.id === item.id)
+        const newCart = [...cart]
+        newCart[index].quantity += 1
+        newCart[index].amount += newCart[index].value
+        setCart(newCart)
+      }
+    }
+    
+
+  }
+
+
   return (
     <ContainerApp className="App">
       <GlobalStyle />
       <Filters onChangeSetFilters={onChangeSetFilters} />
-      <Home products={orderedProducts} onChangeValueSelect={onChangeValueSelect} order={order} />
-      <Cart />
+      <Home products={orderedProducts} onChangeValueSelect={onChangeValueSelect} order={order} onClickAddCart={onClickAddCart}/>
+      <Cart cart={cart}/>
     </ContainerApp>
   );
 }

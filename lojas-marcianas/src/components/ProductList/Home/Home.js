@@ -1,16 +1,12 @@
 import { ProductCard } from '../ProductCard/ProductCard'
 import { SelectOrdination, Navigating, Lable, ContainerHome, DivSelectionOrdination, Cards } from './homeStyle'
 
-import { SlBasket } from 'react-icons/sl'
+export const coinBrl = (value) => {
+    return value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
+}
 
 export const Home = (props) => {
 
-    function coinBrl(value) {
-        return value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
-    }
-
-    const addCart = () => {
-    }
 
     return (
         <ContainerHome>
@@ -28,7 +24,7 @@ export const Home = (props) => {
             </Navigating>
 
             <Cards>
-                {props.products.map(item => <ProductCard key={item.id} imageUrl={item.imageUrl[0]} name={item.name} value={coinBrl(item.value)} addCart={addCart} cartIcon={<>{SlBasket}</>} />)}
+                {props.products.map(item => <ProductCard key={item.id} imageUrl={item.imageUrl[0]} name={item.name} value={coinBrl(item.value)} onClickAddCart={props.onClickAddCart} idItem={item.id}/>)}
             </Cards>
 
         </ContainerHome>

@@ -1,5 +1,6 @@
 import { Card, Image, NameProduct, PriceProduct, SectionPrice, ArrowLeft, ArrowRight, ShoppingCart, ImagesItem } from "./productCardStyle"
 
+
 export const ProductCard = (props) => {
     return (
         <>
@@ -13,10 +14,9 @@ export const ProductCard = (props) => {
                 <NameProduct>{props.name}</NameProduct>
                 <SectionPrice>
                     <PriceProduct>{props.value}</PriceProduct>
-                    <ShoppingCart onClick={props.addCart} />
+                    <ShoppingCart onClickAddCart={props.onClickAddCart} idItem={props.idItem}/>
                 </SectionPrice>
                 
-
             </Card>
 
         </>
