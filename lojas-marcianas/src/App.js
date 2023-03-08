@@ -65,26 +65,48 @@ function App() {
     setOrder(event.target.value)
   }
 
-  const onClickAddCart = (event) => {
-   
+  const addCart = (event, quantity) => {
+
+    const item = productsStock.find((product) => {
+      return product.id === Number(event.target.name)
+    })
+
+    let newItem
+
+    if (!cart.find(product => product.id === item.id)) {
+      newItem = { ...item, quantity: 1, amount: item.value }
+    } else {
+      newItem = { ...item, quantity: quantity, amount: quantity * item.value }
+    }
+
+    setCart([...cart, newItem])
+  }
+
+  const onClickAddCart = (event, indexName, quantity) => {
+
     let item = productsStock.find(item => {
+      if (indexName) {
+        return item.id === Number(indexName)
+      }
       return item.id === Number(event.target.id)
     })
 
-    if(item){
+    if (item) {
 
-      if(!cart.find(product => product.id === item.id)){
-        item = {...item, quantity: 1, amount: item.value}
+      if ((!cart.find(product => product.id === item.id))) {
+        console.log('Primeiro Lançamento')
+        item = { ...item, quantity: 1, amount: item.value }
         setCart([...cart, item])
-      }else{
+      } else if (quantity && indexName) {
+        console.log('Segundo Lançamento')
         const index = cart.findIndex(product => product.id === item.id)
         const newCart = [...cart]
-        newCart[index].quantity += 1
-        newCart[index].amount += newCart[index].value
+        newCart[index].quantity = quantity
+        newCart[index].amount = newCart[index].value * quantity
         setCart(newCart)
       }
     }
-    
+
 
   }
 
@@ -93,8 +115,8 @@ function App() {
     <ContainerApp className="App">
       <GlobalStyle />
       <Filters onChangeSetFilters={onChangeSetFilters} />
-      <Home products={orderedProducts} onChangeValueSelect={onChangeValueSelect} order={order} onClickAddCart={onClickAddCart}/>
-      <Cart cart={cart}/>
+      <Home products={orderedProducts} onChangeValueSelect={onChangeValueSelect} order={order} onClickAddCart={onClickAddCart} />
+      <Cart cart={cart} onClickAddCart={onClickAddCart} />
     </ContainerApp>
   );
 }
