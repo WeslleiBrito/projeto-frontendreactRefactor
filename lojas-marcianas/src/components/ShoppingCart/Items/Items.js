@@ -1,22 +1,19 @@
-import { Text, ButtonRemove, Item, Quantity, Modify, Values, ValueUnitProduct, Amount, Trash } from "./itemStyle"
+import { Text, Item, Quantity, Modify, Values, ValueUnitProduct, Amount, Trash } from "./itemStyle"
 import { coinBrl } from "../../ProductList/Home/Home"
 import { useEffect, useState } from "react"
 
 export const Items = (props) => {
 
-    const { nameProduct, quantity, unitaryValue, amount, id, onClickAddCart } = props
+    const { nameProduct, quantity, unitaryValue, amount, id, addCart } = props
     const [inputQuantity, setInputQuantity] = useState(quantity)
-    let indexName = ""
 
     const onClickSetQuantity = (event) => {
         setInputQuantity(Number(event.target.value))
-        indexName = Number(event.target.name)
+        addCart(event, Number(event.target.value))
     }
 
-    useEffect(() => {
-        onClickAddCart(indexName, inputQuantity)
-    }, [inputQuantity])
 
+    useEffect(() => { setInputQuantity(quantity) }, [quantity])
     return (
         <>
             <Item>
@@ -28,7 +25,7 @@ export const Items = (props) => {
                 </Values>
 
                 <Modify>
-                    <Quantity type={'number'} value={inputQuantity} onChange={onClickSetQuantity} name={id} />
+                    <Quantity type={'number'} value={inputQuantity} onChange={onClickSetQuantity} id={id} min={1} />
                     <Trash id={id} />
                 </Modify>
 

@@ -24,7 +24,7 @@ export const Home = (props) => {
             </Navigating>
 
             <Cards>
-                {props.products.map(item => <ProductCard key={item.id} imageUrl={item.imageUrl[0]} name={item.name} value={coinBrl(item.value)} onClickAddCart={props.onClickAddCart} idItem={item.id}/>)}
+                {props.products.map(item => <ProductCard key={item.id} imageUrl={item.imageUrl[0]} name={item.name} value={coinBrl(item.value)} addCart={props.addCart} idItem={item.id} />)}
             </Cards>
 
         </ContainerHome>

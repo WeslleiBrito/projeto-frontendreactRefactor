@@ -65,48 +65,39 @@ function App() {
     setOrder(event.target.value)
   }
 
-  const addCart = (event, quantity) => {
+  const addCart = (event, quantityItem, click) => {
 
     const item = productsStock.find((product) => {
-      return product.id === Number(event.target.name)
+      return product.id === Number(event.target.id)
     })
 
     let newItem
 
     if (!cart.find(product => product.id === item.id)) {
       newItem = { ...item, quantity: 1, amount: item.value }
+
+      setCart([...cart, newItem])
     } else {
-      newItem = { ...item, quantity: quantity, amount: quantity * item.value }
-    }
+      newItem = [...cart]
+      const index = cart.findIndex(product => product.id === item.id)
 
-    setCart([...cart, newItem])
-  }
+      if (quantityItem) {
+        newItem[index].quantity = quantityItem
+        newItem[index].amount = quantityItem * newItem[index].value
+      } else {
 
-  const onClickAddCart = (event, indexName, quantity) => {
+        if (click) {
+          newItem[index].quantity += 1
+          newItem[index].amount += newItem[index].value
+        } else {
+          newItem[index].quantity = ""
+          newItem[index].amount = ""
+        }
 
-    let item = productsStock.find(item => {
-      if (indexName) {
-        return item.id === Number(indexName)
       }
-      return item.id === Number(event.target.id)
-    })
 
-    if (item) {
-
-      if ((!cart.find(product => product.id === item.id))) {
-        console.log('Primeiro Lançamento')
-        item = { ...item, quantity: 1, amount: item.value }
-        setCart([...cart, item])
-      } else if (quantity && indexName) {
-        console.log('Segundo Lançamento')
-        const index = cart.findIndex(product => product.id === item.id)
-        const newCart = [...cart]
-        newCart[index].quantity = quantity
-        newCart[index].amount = newCart[index].value * quantity
-        setCart(newCart)
-      }
+      setCart(newItem)
     }
-
 
   }
 
@@ -115,8 +106,8 @@ function App() {
     <ContainerApp className="App">
       <GlobalStyle />
       <Filters onChangeSetFilters={onChangeSetFilters} />
-      <Home products={orderedProducts} onChangeValueSelect={onChangeValueSelect} order={order} onClickAddCart={onClickAddCart} />
-      <Cart cart={cart} onClickAddCart={onClickAddCart} />
+      <Home products={orderedProducts} onChangeValueSelect={onChangeValueSelect} order={order} addCart={addCart} />
+      <Cart cart={cart} addCart={addCart} />
     </ContainerApp>
   );
 }

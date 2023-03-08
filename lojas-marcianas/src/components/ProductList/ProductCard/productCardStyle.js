@@ -5,6 +5,7 @@ import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
 import { HiOutlineShoppingCart } from "react-icons/hi";
 
 
+
 export const ArrowLeft = () => {
     return (
         <>
@@ -44,18 +45,16 @@ export const ArrowRight = () => {
 
 export const ShoppingCart = (props) => {
     return (
-            <HiOutlineShoppingCart
-                style=
+        <HiOutlineShoppingCart size={"4vh"}
+            style=
+            {
                 {
-                    {
-                        width: "4vh",
-                        height: "4vh", 
-                        color: "green", 
-                    }
+                    color: "green",
                 }
-                id={props.idItem}
-                onClick={props.onClickAddCart}
-            />
+            }
+            id={props.name}
+            onClick={(event) => props.addCart(event, 0, 1)}
+        />
     )
 }
 export const Card = styled.article`

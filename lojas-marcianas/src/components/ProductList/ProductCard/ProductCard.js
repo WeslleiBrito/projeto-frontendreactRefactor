@@ -14,9 +14,9 @@ export const ProductCard = (props) => {
                 <NameProduct>{props.name}</NameProduct>
                 <SectionPrice>
                     <PriceProduct>{props.value}</PriceProduct>
-                    <ShoppingCart onClickAddCart={props.onClickAddCart} idItem={props.idItem}/>
+                    <ShoppingCart addCart={props.addCart} name={props.idItem} />
                 </SectionPrice>
-                
+
             </Card>
 
         </>
