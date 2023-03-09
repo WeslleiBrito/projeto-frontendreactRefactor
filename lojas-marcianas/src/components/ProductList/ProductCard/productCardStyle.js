@@ -1,9 +1,7 @@
 
 import styled from "styled-components";
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
-
-import { HiOutlineShoppingCart } from "react-icons/hi";
-
+import cartIcon from "../../../assents/icons/cart.svg"
 
 
 export const ArrowLeft = () => {
@@ -44,19 +42,26 @@ export const ArrowRight = () => {
 }
 
 export const ShoppingCart = (props) => {
+
+    const buttonStyle = {
+        background: "transparent",
+        backgroundImage: `url(${cartIcon})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center",
+        backgroundSize: "100% 100%",
+        height: "4vh",
+        width: "4vh",
+        border: "none",
+        borderRadius: "5px",
+        cursor: "pointer"
+    };
+
     return (
-        <HiOutlineShoppingCart size={"4vh"}
-            style=
-            {
-                {
-                    color: "green",
-                }
-            }
-            id={props.name}
-            onClick={(event) => props.addCart(event, 0, 1)}
-        />
+        <button style={buttonStyle} id={props.name} onClick={(event) => props.addCart(event, 0, 1)} />
     )
+
 }
+
 export const Card = styled.article`
     height: 63vh;
     width: 20vw;

@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import { HiTrash } from "react-icons/hi"
+import { HiTrash } from "react-icons/hi";
+import trashIcon from "../../../assents/icons/trash.svg"
+
 
 export const Text = styled.p`
     
-`
-export const ButtonRemove = styled.button`
-
 `
 export const Item = styled.li`
     display: flex;
@@ -44,5 +43,26 @@ export const Trash = (props) => {
             id={props.id}
             onClick={props.removeProductCart}
         />
+    )
+}
+
+export const ButtonRemove = (props) => {
+
+    const buttonStyle = {
+        background: "transparent",
+        backgroundImage: `url(${trashIcon})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center",
+        backgroundSize: "100% 100%",
+        height: "4vh",
+        width: "4vh",
+        border: "none",
+        borderRadius: "5px",
+
+        cursor: "pointer"
+    };
+
+    return (
+        <button style={buttonStyle} id={props.id} onClick={props.removeProductCart} />
     )
 }
