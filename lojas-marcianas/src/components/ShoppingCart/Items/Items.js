@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 export const Items = (props) => {
 
-    const { nameProduct, quantity, unitaryValue, amount, id, addCart } = props
+    const { nameProduct, quantity, unitaryValue, amount, id, addCart, removeProductCart } = props
     const [inputQuantity, setInputQuantity] = useState(quantity)
 
     const onClickSetQuantity = (event) => {
@@ -26,7 +26,10 @@ export const Items = (props) => {
 
                 <Modify>
                     <Quantity type={'number'} value={inputQuantity} onChange={onClickSetQuantity} id={id} min={1} />
-                    <Trash id={id} />
+                    <button id={id} onClick={removeProductCart}>
+                        <Trash id={id} removeProductCart={removeProductCart} />
+                    </button>
+
                 </Modify>
 
             </Item>

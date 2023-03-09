@@ -8,58 +8,53 @@ import { useState, useEffect } from 'react';
 import './App.css';
 
 
-
 function App() {
+
   const [filters, setFilters] = useState({
     minValue: '',
     maxValue: '',
     nameProduct: ''
   })
-  const [filteredProducts, setFilteredProducts] = useState([...productsStock])
-  const [orderedProducts, setOrderedProducts] = useState([...productsStock])
+
   const [order, setOrder] = useState('')
   const [cart, setCart] = useState([])
+  const [listProducts, setListProducts] = useState([...productsStock])
+
+
+  useEffect(() => {
+    const newStock = productsStock.filter((product) => {
+      return filters.minValue ? product.value >= filters.minValue : product
+    })
+      .filter((product) => {
+        return filters.maxValue ? product.value <= filters.maxValue : product
+      })
+      .filter((product) => {
+        return product.name.toLocaleLowerCase().includes(filters.nameProduct.toLocaleLowerCase())
+      })
+      .sort((a, b) => {
+        if (order === "crescent") {
+          return a.value - b.value
+        }
+
+        if (order === "decrescent") {
+          return b.value - a.value
+        }
+
+        return 0
+      },)
+
+    setListProducts(newStock)
+
+  }, [filters, order])
 
   const onChangeSetFilters = (event) => {
     const key = event.target.id
     setFilters({ ...filters, [key]: event.target.value })
   }
 
-  useEffect(() => {
-
-    let filtered = [...productsStock]
-
-    if (filters.minValue) {
-      filtered = filtered.filter(product => product.value >= Number(filters.minValue))
-    }
-
-    if (filters.maxValue) {
-      filtered = filtered.filter(product => product.value <= Number(filters.maxValue))
-    }
-
-    if (filters.nameProduct) {
-      filtered = filtered.filter(product => product.name.toLowerCase().includes(filters.nameProduct.toLowerCase()))
-    }
-
-    setFilteredProducts(filtered)
-  }, [filters])
-
-  useEffect(() => {
-    let ordered = [...filteredProducts]
-
-    switch (order) {
-      case 'decrescent':
-        ordered = ordered.sort((a, b) => b.value - a.value);
-        break;
-      case 'crescent':
-        ordered = ordered.sort((a, b) => a.value - b.value);
-        break;
-      default:
-        break;
-    }
-
-    setOrderedProducts(ordered);
-  }, [order, filteredProducts])
+  const amountCart = cart.reduce((accumulator, product) => {
+    return accumulator + product.amount
+  }, 0)
 
   const onChangeValueSelect = (event) => {
     setOrder(event.target.value)
@@ -101,13 +96,17 @@ function App() {
 
   }
 
+  const removeProductCart = (event) => {
+    const removed = cart.filter((item) => item.id !== Number(event.target.id))
+    setCart(removed)
+  }
 
   return (
     <ContainerApp className="App">
       <GlobalStyle />
       <Filters onChangeSetFilters={onChangeSetFilters} />
-      <Home products={orderedProducts} onChangeValueSelect={onChangeValueSelect} order={order} addCart={addCart} />
-      <Cart cart={cart} addCart={addCart} />
+      <Home products={listProducts} onChangeValueSelect={onChangeValueSelect} order={order} addCart={addCart} />
+      <Cart cart={cart} addCart={addCart} amountCart={amountCart} removeProductCart={removeProductCart} />
     </ContainerApp>
   );
 }

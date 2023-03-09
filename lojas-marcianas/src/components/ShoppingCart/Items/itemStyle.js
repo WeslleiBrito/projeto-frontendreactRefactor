@@ -23,7 +23,7 @@ export const Modify = styled.section`
 export const Values = styled.section`
     display: flex;
     justify-content: space-around;
-` 
+`
 
 export const ValueUnitProduct = styled.h5`
 `
@@ -32,17 +32,17 @@ export const Amount = styled.h5`
 `
 export const Trash = (props) => {
     return (
-            <HiTrash
-                style=
+        <HiTrash
+            style=
+            {
                 {
-                    {
-                        width: "4vh",
-                        height: "4vh", 
-                        color: "red", 
-                    }
+                    width: "4vh",
+                    height: "4vh",
+                    color: "red",
                 }
-                id={props.idItem}
-                onClick={props.onClickfindItemProductStock}
-            />
+            }
+            id={props.id}
+            onClick={props.removeProductCart}
+        />
     )
 }
