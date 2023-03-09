@@ -1,7 +1,7 @@
 
 import styled from "styled-components";
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
-import cartIcon from "../../../assents/icons/cart.svg"
+import cartIcon from "../../../assets/icons/cart.svg"
 
 
 export const ArrowLeft = () => {
@@ -100,11 +100,4 @@ export const NameProduct = styled.p`
 `
 export const PriceProduct = styled.p`
     
-
-`
-export const ButtonAddCart = styled.button`
-
-`
-
-export const BtnCartIcon = styled.img`
 `

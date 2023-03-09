@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { HiTrash } from "react-icons/hi";
-import trashIcon from "../../../assents/icons/trash.svg"
+import trashIcon from "../../../assets/icons/trash.svg"
 
 
 export const Text = styled.p`
@@ -29,22 +28,6 @@ export const ValueUnitProduct = styled.h5`
 
 export const Amount = styled.h5`
 `
-export const Trash = (props) => {
-    return (
-        <HiTrash
-            style=
-            {
-                {
-                    width: "4vh",
-                    height: "4vh",
-                    color: "red",
-                }
-            }
-            id={props.id}
-            onClick={props.removeProductCart}
-        />
-    )
-}
 
 export const ButtonRemove = (props) => {
 

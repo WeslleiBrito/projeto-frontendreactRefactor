@@ -3,7 +3,7 @@ import { Home } from './components/ProductList/Home/Home';
 import { Cart } from './components/ShoppingCart/Cart/Cart';
 import { GlobalStyle } from './GlobalStyle'
 import { ContainerApp } from './components/styleApp';
-import { productsStock } from './assents/productsList';
+import { productsStock } from './assets/productsList';
 import { useState, useEffect } from 'react';
 import './App.css';
 
