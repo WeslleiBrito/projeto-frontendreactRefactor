@@ -16,8 +16,12 @@ function App() {
     nameProduct: ''
   })
 
+  const recoverStorageCart = () => {
+    return JSON.parse(localStorage.getItem('cart'))
+  }
+
   const [order, setOrder] = useState('')
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState(recoverStorageCart() ? recoverStorageCart() : [])
   const [listProducts, setListProducts] = useState([...productsStock])
 
 
@@ -100,6 +104,11 @@ function App() {
     const removed = cart.filter((item) => item.id !== Number(event.target.id))
     setCart(removed)
   }
+
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart])
 
   return (
     <ContainerApp className="App">

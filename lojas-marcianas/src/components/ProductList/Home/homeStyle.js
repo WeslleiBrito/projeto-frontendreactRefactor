@@ -22,7 +22,7 @@ export const Navigating = styled.nav`
 export const Lable = styled.label`
 `
 
-export const Cards = styled.section`
+export const Cards = styled.ul`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 5vh;
