@@ -127,7 +127,7 @@ function App() {
         <GlobalStyle />
         <Filters onChangeSetFilters={onChangeSetFilters} />
         <Home products={listProducts} onChangeValueSelect={onChangeValueSelect} order={order} addCart={addCart} />
-        <Cart cart={cart} addCart={addCart} amountCart={amountCart} removeProductCart={removeProductCart} showCart={showCart} />
+        {showCart ? <Cart cart={cart} addCart={addCart} amountCart={amountCart} removeProductCart={removeProductCart} showCart={showCart} /> : false}
       </ContainerApp>
     </>
   );
