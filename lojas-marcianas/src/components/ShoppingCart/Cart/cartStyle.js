@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
-export const ContainerCart = styled.main`
+export const ContainerCart = styled.section`
     display: flex;
     flex-direction: column;
+    position: absolute;
+    left: 86%;
+    top: 6%;
+    width: 13vw;
 `
 export const Text = styled.p`
 

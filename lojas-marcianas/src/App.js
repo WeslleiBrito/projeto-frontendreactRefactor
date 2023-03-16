@@ -1,6 +1,7 @@
 import { Filters } from './components/Filters/Filters'
 import { Home } from './components/ProductList/Home/Home';
 import { Cart } from './components/ShoppingCart/Cart/Cart';
+import { Header } from './components/Header/Header';
 import { GlobalStyle } from './GlobalStyle'
 import { ContainerApp } from './components/styleApp';
 import { productsStock } from './assets/productsList';
@@ -46,14 +47,20 @@ function App() {
 
         return 0
       },)
-
+    
     setListProducts(newStock)
 
   }, [filters, order])
 
-  const onChangeSetFilters = (event) => {
-    const key = event.target.id
-    setFilters({ ...filters, [key]: event.target.value })
+  const onChangeSetFilters = (event, value) => {
+
+    if(event){
+      const key = event.target.id
+      setFilters({ ...filters, [key]: event.target.value })
+    }else{
+      setFilters({...Filters, nameProduct: value})
+    }
+   
   }
 
   const amountCart = cart.reduce((accumulator, product) => {
@@ -111,12 +118,15 @@ function App() {
   }, [cart])
 
   return (
-    <ContainerApp className="App">
-      <GlobalStyle />
-      <Filters onChangeSetFilters={onChangeSetFilters} />
-      <Home products={listProducts} onChangeValueSelect={onChangeValueSelect} order={order} addCart={addCart} />
-      <Cart cart={cart} addCart={addCart} amountCart={amountCart} removeProductCart={removeProductCart} />
-    </ContainerApp>
+    <>
+      <Header onChangeSetFilters={onChangeSetFilters}/>
+      <ContainerApp className="App">
+        <GlobalStyle />
+        <Filters onChangeSetFilters={onChangeSetFilters} />
+        <Home products={listProducts} onChangeValueSelect={onChangeValueSelect} order={order} addCart={addCart} />
+        <Cart cart={cart} addCart={addCart} amountCart={amountCart} removeProductCart={removeProductCart} />
+      </ContainerApp>
+    </>
   );
 }
 
