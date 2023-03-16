@@ -3,14 +3,17 @@ import { Title, Text, ContainerCart, List } from "./cartStyle"
 import { coinBrl } from "../../ProductList/Home/Home"
 
 
-export const Cart = ({ cart, addCart, amountCart, removeProductCart }) => {
+export const Cart = ({ cart, addCart, amountCart, removeProductCart, showCart }) => {
     return (
         <ContainerCart>
             <Title>Carrinho</Title>
 
-            <List>
+            {showCart ? <List>
                 {cart.map((product) => <Items key={product.id} quantity={product.quantity} nameProduct={product.name} unitaryValue={product.value} amount={product.amount} id={product.id} addCart={addCart} removeProductCart={removeProductCart} />)}
-            </List>
+            </List> :
+                <>
+                </>
+            }
 
             <Text>Valor total: {coinBrl(amountCart)}</Text>
         </ContainerCart>

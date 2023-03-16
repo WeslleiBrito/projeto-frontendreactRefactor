@@ -9,14 +9,14 @@ export const Header = (props) => {
         setSearchName(event.target.value)
     }
 
-    return(
+    return (
         <BodyHeader>
-            <Logo src={logo}/>
+            <Logo src={logo} />
             <DivSearch>
-                <InputSearch id="nameProduct" placeholder={"Busque aqui seu produto"} onChange={handleInputChangeSearchName}/>
-                <Search onClick={props.onChangeSetFilters} value={searchName}/>
+                <InputSearch id="nameProduct" placeholder={"Busque aqui seu produto"} onChange={handleInputChangeSearchName} />
+                <Search onClick={props.onChangeSetFilters} value={searchName} />
             </DivSearch>
-            <CartHeader/>
+            <CartHeader handleSetShowCart={props.handleSetShowCart} />
         </BodyHeader>
     )
 }

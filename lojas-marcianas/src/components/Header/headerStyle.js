@@ -17,7 +17,7 @@ export const Logo = styled.img`
     margin-left: 8vw;
 `
 
-export const InputSearch  = styled.input`
+export const InputSearch = styled.input`
     width: 90%;
     height: 4vh;
     border: none;
@@ -52,7 +52,7 @@ export const CartHeader = (props) => {
     };
 
     return (
-        <button style={buttonStyle}/>
+        <button style={buttonStyle} onClick={props.handleSetShowCart} />
     )
 }
 
@@ -73,6 +73,6 @@ export const Search = (props) => {
     };
 
     return (
-        <button style={buttonStyle} onClick={() => props.onClick(null, props.value)}/>
+        <button style={buttonStyle} onClick={() => props.onClick(null, props.value)} />
     )
 }

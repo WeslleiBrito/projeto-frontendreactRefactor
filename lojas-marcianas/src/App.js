@@ -24,7 +24,7 @@ function App() {
   const [order, setOrder] = useState('')
   const [cart, setCart] = useState(recoverStorageCart() ? recoverStorageCart() : [])
   const [listProducts, setListProducts] = useState([...productsStock])
-
+  const [showCart, setShowCart] = useState(false)
 
   useEffect(() => {
     const newStock = productsStock.filter((product) => {
@@ -47,20 +47,20 @@ function App() {
 
         return 0
       },)
-    
+
     setListProducts(newStock)
 
   }, [filters, order])
 
   const onChangeSetFilters = (event, value) => {
 
-    if(event){
+    if (event) {
       const key = event.target.id
       setFilters({ ...filters, [key]: event.target.value })
-    }else{
-      setFilters({...Filters, nameProduct: value})
+    } else {
+      setFilters({ ...Filters, nameProduct: value })
     }
-   
+
   }
 
   const amountCart = cart.reduce((accumulator, product) => {
@@ -112,19 +112,22 @@ function App() {
     setCart(removed)
   }
 
-
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart))
   }, [cart])
 
+  const handleSetShowCart = () => {
+    setShowCart(showCart ? false : true)
+  }
+
   return (
     <>
-      <Header onChangeSetFilters={onChangeSetFilters}/>
+      <Header onChangeSetFilters={onChangeSetFilters} handleSetShowCart={handleSetShowCart} />
       <ContainerApp className="App">
         <GlobalStyle />
         <Filters onChangeSetFilters={onChangeSetFilters} />
         <Home products={listProducts} onChangeValueSelect={onChangeValueSelect} order={order} addCart={addCart} />
-        <Cart cart={cart} addCart={addCart} amountCart={amountCart} removeProductCart={removeProductCart} />
+        <Cart cart={cart} addCart={addCart} amountCart={amountCart} removeProductCart={removeProductCart} showCart={showCart} />
       </ContainerApp>
     </>
   );
