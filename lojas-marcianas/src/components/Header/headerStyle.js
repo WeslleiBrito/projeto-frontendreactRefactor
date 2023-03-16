@@ -2,14 +2,19 @@
 import styled from "styled-components";
 import cartHeader from "../../assets/icons/cartHeader.svg"
 import search from "../../assets/icons/search.svg"
+import backGroundHeader from "../../assets/img/backgroundHeader.jpg"
+
 
 
 export const BodyHeader = styled.section`
     height: 12vh;
     width: 100%;
-    background-color: #F80032;
     display: flex;
     align-items: center;
+    background-image: url(${backGroundHeader});
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 `
 
 export const Logo = styled.img`

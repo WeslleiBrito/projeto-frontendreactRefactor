@@ -1,4 +1,4 @@
-import { Text, Item, Quantity, Modify, Values, ValueUnitProduct, Amount, ButtonRemove } from "./itemStyle"
+import { Text, Item, Quantity, Modify, Values, ValueUnitProduct, Amount, ButtonRemove, ButtonAdd, ButtonReduce } from "./itemStyle"
 import { coinBrl } from "../../ProductList/Home/Home"
 import { useEffect, useState } from "react"
 
@@ -27,6 +27,8 @@ export const Items = (props) => {
 
                 <Modify>
                     <Quantity type={'number'} value={inputQuantity} onChange={onClickSetQuantity} id={id} min={1} />
+                    <ButtonAdd />
+                    <ButtonReduce />
                     <ButtonRemove id={id} removeProductCart={removeProductCart} />
                 </Modify>
 

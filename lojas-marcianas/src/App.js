@@ -87,12 +87,15 @@ function App() {
       newItem = [...cart]
       const index = cart.findIndex(product => product.id === item.id)
 
-      if (quantityItem) {
+      if (quantityItem && !click) {
         newItem[index].quantity = quantityItem
         newItem[index].amount = quantityItem * newItem[index].value
       } else {
 
-        if (click) {
+        if (click && quantityItem) {
+          newItem[index].quantity += quantityItem
+          newItem[index].amount += newItem[index].value * quantityItem
+        } else if (click) {
           newItem[index].quantity += 1
           newItem[index].amount += newItem[index].value
         } else {
