@@ -62,7 +62,7 @@ export const ShoppingCart = (props) => {
 
 }
 
-export const Card = styled.article`
+export const Card = styled.li`
     height: 63vh;
     width: 20vw;
     display: flex;
@@ -71,6 +71,16 @@ export const Card = styled.article`
     border: 1px solid black;
     border-radius: 1em;
     padding-top: 1vh;
+
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2vh);
+    }
 `
 export const ImagesItem = styled.section`
     position: relative;

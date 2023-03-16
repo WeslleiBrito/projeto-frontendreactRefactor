@@ -10,6 +10,19 @@ export const Item = styled.li`
     flex-direction: column;
 `
 
+/* export const Item = styled.li`
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.7vh);
+  }
+`;
+ */
+
 export const Quantity = styled.input`
     text-align: center;
     width: 3vw;

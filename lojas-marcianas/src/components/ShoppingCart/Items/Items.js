@@ -12,8 +12,9 @@ export const Items = (props) => {
         addCart(event, Number(event.target.value))
     }
 
-
     useEffect(() => { setInputQuantity(quantity) }, [quantity])
+
+
     return (
         <>
             <Item>
