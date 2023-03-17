@@ -64,7 +64,7 @@ function App() {
   }
 
   const amountCart = cart.reduce((accumulator, product) => {
-    return accumulator + product.amount
+    return accumulator + (product.amount ? product.amount : 0)
   }, 0)
 
   const onChangeValueSelect = (event) => {
@@ -80,12 +80,15 @@ function App() {
     let newItem
 
     if (!cart.find(product => product.id === item.id)) {
-      newItem = { ...item, quantity: 1, amount: item.value }
 
+      newItem = { ...item, quantity: 1, amount: item.value }
       setCart([...cart, newItem])
+
     } else {
+
       newItem = [...cart]
       const index = cart.findIndex(product => product.id === item.id)
+
 
       if (quantityItem && !click) {
         newItem[index].quantity = quantityItem
@@ -96,8 +99,13 @@ function App() {
           newItem[index].quantity += quantityItem
           newItem[index].amount += newItem[index].value * quantityItem
         } else if (click) {
-          newItem[index].quantity += 1
-          newItem[index].amount += newItem[index].value
+          if (typeof newItem[index].quantity === "string") {
+            newItem[index].quantity = 1
+            newItem[index].amount = newItem[index].value
+          } else {
+            newItem[index].quantity += 1
+            newItem[index].amount += newItem[index].value
+          }
         } else {
           newItem[index].quantity = ""
           newItem[index].amount = ""

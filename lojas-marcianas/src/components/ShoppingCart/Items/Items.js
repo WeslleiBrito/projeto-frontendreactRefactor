@@ -7,30 +7,30 @@ export const Items = (props) => {
     const { nameProduct, quantity, unitaryValue, amount, id, addCart, removeProductCart } = props
     const [inputQuantity, setInputQuantity] = useState(quantity)
 
-    const onClickSetQuantity = (event, value) => {
-        
-        if(!value){
-            setInputQuantity(Number(event.target.value))
-            addCart(event, Number(event.target.value))
-        }else{
 
-            if(quantity + value >= 1 || quantity === ""){
-                if(quantity){
-                    setInputQuantity(event, value + quantity)
-                    addCart(event, value + quantity)
-                }else{
-                    setInputQuantity(event, 1)
-                    addCart(event, 1)
-                }
-                
+    const handleInputQuantity = (event, value) => {
+        if (!value) {
+            if (Number(event.target.value) > 0) {
+                setInputQuantity(Number(event.target.value))
+                addCart(event, Number(event.target.value))
+            } else {
+                setInputQuantity("")
+                addCart(event, "")
             }
-            
+
+        } else {
+            if (quantity + value >= 1) {
+                setInputQuantity(quantity + value)
+                addCart(event, quantity + value)
+            } else {
+                setInputQuantity(1)
+                addCart(event, 1)
+            }
         }
-        
+
     }
 
     useEffect(() => { setInputQuantity(quantity) }, [quantity])
-
 
     return (
         <>
@@ -44,9 +44,9 @@ export const Items = (props) => {
 
                 <Modify>
                     <QuantitySection>
-                        <ButtonAdd id={id} onClickSetQuantity={onClickSetQuantity}/>
-                        <Quantity type={'number'} value={inputQuantity} onChange={onClickSetQuantity} id={id} min={1} />
-                        <ButtonReduce id={id} onClickSetQuantity={onClickSetQuantity}/>
+                        <ButtonAdd id={id} handleInputQuantity={handleInputQuantity} />
+                        <Quantity type={'number'} value={inputQuantity} onChange={handleInputQuantity} id={id} min={1} />
+                        <ButtonReduce id={id} handleInputQuantity={handleInputQuantity} />
                     </QuantitySection>
                     <ButtonRemove id={id} removeProductCart={removeProductCart} />
                 </Modify>

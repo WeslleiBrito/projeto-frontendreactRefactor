@@ -81,7 +81,7 @@ export const ButtonReduce = (props) => {
     }
 
     return (
-        <button style={buttonStyle} id={props.id} onClick={(event) => props.onClickSetQuantity(event, -1)}></button>
+        <button style={buttonStyle} id={props.id} onClick={(event) => props.handleInputQuantity(event, -1)}></button>
     )
 }
 
@@ -103,9 +103,9 @@ export const ButtonAdd = (props) => {
     }
 
     return (
-        <button style={buttonStyle} id={props.id} onClick={(event) => (props.onClickSetQuantity(event, 1))}></button>
+        <button style={buttonStyle} id={props.id} onClick={(event) => props.handleInputQuantity(event, 1)}></button>
     )
-} 
+}
 
 export const QuantitySection = styled.section`
     width: 80%;
