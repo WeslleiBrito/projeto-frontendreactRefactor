@@ -9,7 +9,7 @@ export const ContainerCart = styled.section`
     width: 13vw;
 `
 export const Text = styled.p`
-
+    margin-top: 2vh;
 `
 export const Title = styled.h4`
 `

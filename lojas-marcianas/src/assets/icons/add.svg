@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512.01 336.37"><path fill-rule="nonzero" d="M469.51 336.37H42.47c-9.9-.03-19.84-3.47-27.89-10.47-17.68-15.4-19.55-42.24-4.15-59.92L229.45 14.56c1.51-1.7 3.17-3.33 4.98-4.82 18.06-14.93 44.83-12.41 59.76 5.65l206.65 249.76a42.308 42.308 0 0 1 11.17 28.71c0 23.47-19.03 42.51-42.5 42.51z"/></svg>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 484.8 484.8" xml:space="preserve">
+<circle style="fill:#0D9B79;" cx="242.4" cy="242.4" r="242.4"/>
+<path style="fill:#056B5C;" d="M0,242.4C0,376,108,484,242.4,484C376,484,484,376,484,242.4"/>
+<polygon style="fill:#EBFFF6;" points="394.4,202.4 282.4,202.4 282.4,90.4 202.4,90.4 202.4,202.4 90.4,202.4 90.4,282.4 
+	202.4,282.4 202.4,394.4 282.4,394.4 282.4,282.4 394.4,282.4 "/>
+<polygon style="fill:#D6EAE0;" points="282.4,200.8 200.8,282.4 202.4,282.4 202.4,394.4 282.4,394.4 282.4,282.4 394.4,282.4 
+	394.4,202.4 282.4,202.4 "/>
+</svg>
