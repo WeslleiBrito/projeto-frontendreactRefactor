@@ -4,17 +4,17 @@ export const ContainerCart = styled.section`
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 86%;
-    top: 6%;
-    width: 13vw;
+    left: 79%;
+    top: 3%;
+    width: 20%;
+    height: 60vh;
+    border: 1px solid black;
 `
 export const Text = styled.p`
-
-`
-export const Title = styled.h4`
+    margin-top: 2vh;
 `
 
-export const List = styled.ul`
+export const Itens = styled.aside`
     display: flex;
     flex-direction: column;
 `

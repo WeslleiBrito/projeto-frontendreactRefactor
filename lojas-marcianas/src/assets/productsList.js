@@ -8,7 +8,8 @@ export const productsStock = [
         imageUrl: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGpfpcuFpvn9Rrxj8lRnOcqVAgJcdv73e0oA&usqp=CAU',
             'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQGkzLYjxgH35P2JyodwvVLgBELwI8XIRJ9KWzvxv_WzqpxUR0-xKCASqXDzs5GhDaceFWWlsYlsrGWssf4ZmTyFHqCoVZHCg',
             'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS14k_fzuXwdqBSqRkm6GIKURmkr_hioB- gSFo585XT_WkWTP2d36J6l4diZHIn9F59HvfKXywcTGKuLxitHLpyREvHr161Hw'
-        ]
+        ],
+        indexImage: 0
     },
 
     {
@@ -16,7 +17,8 @@ export const productsStock = [
         name: 'Blusa Nasa Astronauta Espacial Preta',
         value: 74.90,
         imageUrl: ['https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRqe8k9rzvatwIHFnVTc4zMF61bhBqoWq-Q9WCyuQv-cCJK7rF1oy6Wgvy8AUBKnkf4CB0YT7j-Bdy63yXbnhOeObo6GE0u&usqp=CAY'
-        ]
+        ],
+        indexImage: 0
     },
 
     {
@@ -26,7 +28,8 @@ export const productsStock = [
         imageUrl: [
             'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTpHmmRJyt8NTLHeQwH-a4MlefT1gpG_-HvDlTBb4Mn8ZHVkNyBzzuFYi6HswIb_skaILw1aakV3mMtZyrNrPT6-fHcfBoOM9wIM-QCW4BTGlVK9wl9yieP',
             'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQLl42g4vv9nyeOflYqqsdcvaKpWUQ9RgJeLt7N3Ax213LiUi3awiay3ydt9TMLTZrPoTSyEY2kLhQI9uwWOuTXIlRk4LQ46k8zWPNZ5EA'
-        ]
+        ],
+        indexImage: 0
     },
 
     {
@@ -39,7 +42,8 @@ export const productsStock = [
             'https://m.media-amazon.com/images/I/51X5gfayJ2L._AC_SX522_.jpg',
             'https://m.media-amazon.com/images/I/51wezMX+yXL._AC_SX522_.jpg',
             'https://m.media-amazon.com/images/I/41L75Ikj7nL._AC_SX522_.jpg'
-        ]
+        ],
+        indexImage: 0
     },
     {
         id: 5,
@@ -47,7 +51,8 @@ export const productsStock = [
         value: 39.90,
         imageUrl: [
             'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQYljNNWHPB4QUoUqbso41BA9yxTHlfWkTfRF24wurVscmqryhSYCTDehAO2IflgmRz60hNqaY1I6H2WSsReiqMpF_J7bUBaKz5Fkqjp-5N&usqp=CAE'
-        ]
+        ],
+        indexImage: 0
     },
 
     {
@@ -58,6 +63,7 @@ export const productsStock = [
             'https://www.dhresource.com/webp/m/0x0/f2/albu/g10/M01/D8/B3/rBVaVlwrLPaAYfB6AAG8_OvsOws677.jpg',
             'https://www.dhresource.com/webp/m/0x0/f2/albu/g10/M00/C3/23/rBVaVlwrLPeARarxAANvG4lHfhg443.jpg',
             'https://www.dhresource.com/webp/m/0x0/f2/albu/g10/M00/99/85/rBVaVlwrLPiAa7XPAAYJnqt0RA0283.jpg'
-        ]
+        ],
+        indexImage: 0
     }
 ]

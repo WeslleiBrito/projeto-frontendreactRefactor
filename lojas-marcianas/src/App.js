@@ -131,6 +131,24 @@ function App() {
     setShowCart(showCart ? false : true)
   }
 
+  const modifyIndexImage = (event, value) => {
+
+    const item = productsStock.find((product) => {
+      return product.id === Number(event.target.id)
+    })
+
+    const indexListProduct = listProducts.findIndex(product => product.id === item.id)
+
+    const newListProduct = [...listProducts]
+
+    if ((newListProduct[indexListProduct].indexImage + value >= 0) && (newListProduct[indexListProduct].indexImage + value <= newListProduct[indexListProduct].imageUrl.length - 1)) {
+      newListProduct[indexListProduct].indexImage += value
+    }
+
+    setListProducts(newListProduct)
+
+  }
+
   return (
     <>
       <Header onChangeSetFilters={onChangeSetFilters} handleSetShowCart={handleSetShowCart} />

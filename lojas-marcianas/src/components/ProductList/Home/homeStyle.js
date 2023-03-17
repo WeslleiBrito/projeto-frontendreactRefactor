@@ -5,7 +5,7 @@ export const ContainerHome = styled.main`
     flex-direction: column;
     padding: 0 1vw 0 1vw;
     margin-top: 5vh;
-    width: 70%;
+    width: 60%;
 `
 
 export const DivSelectionOrdination = styled.div`
