@@ -1,44 +1,53 @@
 
 import styled from "styled-components";
-import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
 import cartIcon from "../../../assets/icons/cart.svg"
+import arrowRight from "../../../assets/icons/arrowRight.svg"
+import arrowLeft from "../../../assets/icons/arrowLeft.svg"
 
+export const ArrowLeft = (props) => {
+    const buttonStyle = {
+        background: "transparent",
+        position: "absolute",
+        left: "5%",
+        top: "50%",
+        backgroundImage: `url(${arrowLeft})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center",
+        backgroundSize: "cover",
+        height: "6vh",
+        width: "6vh",
+        border: "none",
+        borderRadius: "5px",
+        cursor: "pointer", 
+    };
 
-export const ArrowLeft = () => {
     return (
-        <>
-            <SlArrowLeft
-                style={
-                    {
-                        width: "5vh",
-                        height: "5vh",
-                        left: '5%',
-                        top: '50%',
-                        position: 'absolute'
-                    }
-                }
-            />
-        </>
+        <button style={buttonStyle} id={props.id} onClick={(event) => props.modifyIndexImage(event, -1)}/>
     )
 }
 
-export const ArrowRight = () => {
-    return (
-        <>
-            <SlArrowRight
-                style={
-                    {
-                        width: "5vh",
-                        height: "5vh",
-                        position: "absolute",
-                        right: "5%",
-                        top: "50%",
+export const ArrowRight = (props) => {
 
-                    }
-                }
-            />
-        </>
+    const buttonStyle = {
+        background: "transparent",
+        position: "absolute",
+        right: "5%",
+        top: "50%",
+        backgroundImage: `url(${arrowRight})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center",
+        backgroundSize: "cover",
+        height: "6vh",
+        width: "6vh",
+        border: "none",
+        borderRadius: "5px",
+        cursor: "pointer", 
+    };
+
+    return (
+        <button style={buttonStyle} id={props.id} onClick={(event) => props.modifyIndexImage(event, 1)} />
     )
+
 }
 
 export const ShoppingCart = (props) => {

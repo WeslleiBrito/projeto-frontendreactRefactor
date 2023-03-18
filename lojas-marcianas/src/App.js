@@ -132,7 +132,7 @@ function App() {
   }
 
   const modifyIndexImage = (event, value) => {
-
+    console.log('fui chamado')
     const item = productsStock.find((product) => {
       return product.id === Number(event.target.id)
     })
@@ -155,7 +155,7 @@ function App() {
       <ContainerApp className="App">
         <GlobalStyle />
         <Filters onChangeSetFilters={onChangeSetFilters} />
-        <Home products={listProducts} onChangeValueSelect={onChangeValueSelect} order={order} addCart={addCart} />
+        <Home products={listProducts} onChangeValueSelect={onChangeValueSelect} order={order} addCart={addCart} modifyIndexImage={modifyIndexImage}/>
         {showCart ? <Cart cart={cart} addCart={addCart} amountCart={amountCart} removeProductCart={removeProductCart} showCart={showCart} /> : false}
       </ContainerApp>
     </>

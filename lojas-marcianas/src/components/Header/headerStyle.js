@@ -6,8 +6,8 @@ import backGroundHeader from "../../assets/img/backgroundHeader.jpg"
 
 
 
-export const BodyHeader = styled.section`
-    height: 12vh;
+export const BodyHeader = styled.header`
+    height: 20vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -52,7 +52,7 @@ export const CartHeader = (props) => {
         width: "6vh",
         border: "none",
         borderRadius: "5px",
-        marginRight: "10vh",
+        marginRight: "8.5vh",
         cursor: "pointer"
     };
 
