@@ -7,9 +7,9 @@ export const ProductCard = (props) => {
             <Card>
 
                 <ImagesItem>
-                    <ArrowLeft id={props.idItem} modifyIndexImage={props.modifyIndexImage}/>
-                    <Image src={props.imageUrl} alt="Foto do produto" />
-                    <ArrowRight id={props.idItem} modifyIndexImage={props.modifyIndexImage}/>
+                    <ArrowLeft id={props.idItem} modifyIndexImage={props.modifyIndexImage} />
+                    <Image src={props.image} alt="Foto do produto" />
+                    <ArrowRight id={props.idItem} modifyIndexImage={props.modifyIndexImage} />
                 </ImagesItem>
                 <NameProduct>{props.name}</NameProduct>
                 <SectionPrice>

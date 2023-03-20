@@ -1,14 +1,34 @@
 
 
-export const productsStock = [
+
+
+const importarImagens = (imagens) => {
+
+    let imagensArray = [];
+    imagens.keys().forEach((caminho) => {
+        imagensArray.push(imagens(caminho));
+    });
+    return imagensArray;
+};
+
+const product1 = require.context('./img/imagesProducts/product1', false, /\.(png|jpe?g|svg)$/);
+const product2 = require.context('./img/imagesProducts/product2', false, /\.(png|jpe?g|svg)$/);
+const product3 = require.context('./img/imagesProducts/product3', false, /\.(png|jpe?g|svg)$/);
+const product4 = require.context('./img/imagesProducts/product4', false, /\.(png|jpe?g|svg)$/);
+const product5 = require.context('./img/imagesProducts/product5', false, /\.(png|jpe?g|svg)$/);
+const product6 = require.context('./img/imagesProducts/product6', false, /\.(png|jpe?g|svg)$/);
+const product7 = require.context('./img/imagesProducts/product7', false, /\.(png|jpe?g|svg)$/);
+const product8 = require.context('./img/imagesProducts/product8', false, /\.(png|jpe?g|svg)$/);
+const product9 = require.context('./img/imagesProducts/product9', false, /\.(png|jpe?g|svg)$/);
+const product10 = require.context('./img/imagesProducts/product10', false, /\.(png|jpe?g|svg)$/);
+
+
+/* export const productsStock = [
     {
         id: 1,
         name: 'Camiseta Espaço Astronauta Nasa Lançamento',
         value: 39.90,
-        imageUrl: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGpfpcuFpvn9Rrxj8lRnOcqVAgJcdv73e0oA&usqp=CAU',
-            'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQGkzLYjxgH35P2JyodwvVLgBELwI8XIRJ9KWzvxv_WzqpxUR0-xKCASqXDzs5GhDaceFWWlsYlsrGWssf4ZmTyFHqCoVZHCg',
-            'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS14k_fzuXwdqBSqRkm6GIKURmkr_hioB- gSFo585XT_WkWTP2d36J6l4diZHIn9F59HvfKXywcTGKuLxitHLpyREvHr161Hw'
-        ],
+        imageUrl: importarImagens(product1),
         indexImage: 0
     },
 
@@ -66,14 +86,14 @@ export const productsStock = [
         ],
         indexImage: 0
     }
-]
+] */
 
-export const productsStock2 = [
+export const productsStock = [
     {
         id: 1,
         name: 'Camiseta Nasa Astronauta Masculina e Feminina 100% Algodão Primeira Linha Gola Redonda - Wintershop',
         value: 49.90,
-        images: [],
+        images: importarImagens(product1),
         indexImage: 0
     },
 
@@ -81,7 +101,7 @@ export const productsStock2 = [
         id: 2,
         name: 'CAMISETA MASCULINA OLHO DO UNIVERSO ESTAMPA DIGITAL',
         value: 59.90,
-        images: [],
+        images: importarImagens(product2),
         indexImage: 0
     },
 
@@ -89,7 +109,7 @@ export const productsStock2 = [
         id: 3,
         name: 'CAMISETA MASCULINA NAVES ESPACIAIS ESTAMPA DIGITAL',
         value: 59.90,
-        images: [],
+        images: importarImagens(product3),
         indexImage: 0
     },
 
@@ -97,7 +117,7 @@ export const productsStock2 = [
         id: 4,
         name: 'CAMISETA MASCULINA GALÁXIAS ESTAMPA DIGITAL',
         value: 77.90,
-        images: [],
+        images: importarImagens(product4),
         indexImage: 0
     },
 
@@ -105,7 +125,7 @@ export const productsStock2 = [
         id: 5,
         name: 'Camiseta astronomia- Astronauta - Inoctua',
         value: 72.00,
-        images: [],
+        images: importarImagens(product5),
         indexImage: 0
     },
 
@@ -113,7 +133,7 @@ export const productsStock2 = [
         id: 6,
         name: 'Camiseta Pai E Filho No Espaço Dos Astronautas Da Lua',
         value: 123.95,
-        images: [],
+        images: importarImagens(product6),
         indexImage: 0
     },
 
@@ -121,7 +141,7 @@ export const productsStock2 = [
         id: 7,
         name: 'Moletom ESPAÇO | Astronauta Franklin',
         value: 170.70,
-        images: [],
+        images: importarImagens(product7),
         indexImage: 0
     },
 
@@ -129,7 +149,7 @@ export const productsStock2 = [
         id: 8,
         name: 'Camiseta Astronauta Psychedelic Music DJ',
         value: 122.50,
-        images: [],
+        images: importarImagens(product8),
         indexImage: 0
     },
 
@@ -137,15 +157,15 @@ export const productsStock2 = [
         id: 9,
         name: 'Sistema Solar Camisas Espaciais Exteriores Acampam',
         value: 115.70,
-        images: [],
+        images: importarImagens(product9),
         indexImage: 0
     },
 
     {
         id: 10,
         name: 'Camiseta Planetas Cutos, Sistema Solar, Espaço, Cosmos, Gal',
-        value: 115.70,
-        images: [],
+        value: 79.80,
+        images: importarImagens(product10),
         indexImage: 0
     },
 

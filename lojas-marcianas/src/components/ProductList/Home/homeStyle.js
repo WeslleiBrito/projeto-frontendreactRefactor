@@ -5,7 +5,8 @@ export const ContainerHome = styled.main`
     flex-direction: column;
     padding: 0 1vw 0 1vw;
     margin-top: 5vh;
-    width: 60%;
+    width: 100%;
+
 `
 
 export const DivSelectionOrdination = styled.div`
@@ -24,7 +25,7 @@ export const Lable = styled.label`
 
 export const Cards = styled.ul`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     row-gap: 5vh;
     column-gap: 5vh;
     align-self: center;

@@ -141,7 +141,7 @@ function App() {
 
     const newListProduct = [...listProducts]
 
-    if ((newListProduct[indexListProduct].indexImage + value >= 0) && (newListProduct[indexListProduct].indexImage + value <= newListProduct[indexListProduct].imageUrl.length - 1)) {
+    if ((newListProduct[indexListProduct].indexImage + value >= 0) && (newListProduct[indexListProduct].indexImage + value <= newListProduct[indexListProduct].images.length - 1)) {
       newListProduct[indexListProduct].indexImage += value
     }
 

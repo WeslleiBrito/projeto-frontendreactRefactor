@@ -10,27 +10,15 @@ export const Header = (props) => {
         setSearchName(event.target.value)
     }
 
-    const imagens = require.context('../../assets/img/imagesProducts/product1', false, /\.(png|jpe?g|svg)$/);
 
-const importarImagens = (imagens) => {
-  let imagensArray = [];
-  imagens.keys().forEach((caminho) => {
-    imagensArray.push(imagens(caminho));
-  });
-  return imagensArray;
-};
-
-const todasAsImagens = importarImagens(imagens);
-
-console.log(todasAsImagens);
     return (
         <BodyHeader>
-            <LogoRocket/>
+            <LogoRocket />
             <DivSearch>
-                <Rocket/>
+                <Rocket />
                 <InputSearch id="nameProduct" placeholder={"Busque aqui seu produto"} onChange={handleInputChangeSearchName} />
                 <Search onClick={props.onChangeSetFilters} value={searchName} />
-                <Comet/>
+                <Comet />
             </DivSearch>
             <CartHeader handleSetShowCart={props.handleSetShowCart} />
         </BodyHeader>

@@ -18,11 +18,11 @@ export const ArrowLeft = (props) => {
         width: "6vh",
         border: "none",
         borderRadius: "5px",
-        cursor: "pointer", 
+        cursor: "pointer",
     };
 
     return (
-        <button style={buttonStyle} id={props.id} onClick={(event) => props.modifyIndexImage(event, -1)}/>
+        <button style={buttonStyle} id={props.id} onClick={(event) => props.modifyIndexImage(event, -1)} />
     )
 }
 
@@ -41,7 +41,7 @@ export const ArrowRight = (props) => {
         width: "6vh",
         border: "none",
         borderRadius: "5px",
-        cursor: "pointer", 
+        cursor: "pointer",
     };
 
     return (
@@ -77,7 +77,6 @@ export const Card = styled.li`
     display: flex;
     flex-direction: column;
     align-content: center;
-    border: 1px solid black;
     border-radius: 1em;
     padding-top: 1vh;
 
