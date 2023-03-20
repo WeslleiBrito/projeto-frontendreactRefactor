@@ -4,9 +4,9 @@ export const ContainerCart = styled.section`
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 79%;
+    left: 74.5%;
     top: -6%;
-    width: 20%;
+    width: 25vw;
     height: 60vh;
     margin: 0 auto; 
     background: #A9A9A9;
@@ -28,7 +28,7 @@ export const ContainerCart = styled.section`
     /*Faz seta "apontar para baixo. Definir o valor como 'top' fará ela "apontar para cima" */
     /*Aqui entra a cor da "aba" do balão */
     border-bottom: 3.5vh solid #A9A9A9;
-    top: -3vh; /*localização. Experimente alterar para 'bottom'*/
+    top: -3.4vh; /*localização. Experimente alterar para 'bottom'*/
     left: 70%;
     }
 `

@@ -1,6 +1,7 @@
 import { useState } from "react"
-import { BodyHeader, Logo, InputSearch, DivSearch, CartHeader, Search } from "./headerStyle"
-import logo from "../../assets/img/logo.svg"
+import { BodyHeader, InputSearch, DivSearch, CartHeader, Search, Rocket, Comet, LogoRocket } from "./headerStyle"
+
+
 
 export const Header = (props) => {
     const [searchName, setSearchName] = useState('')
@@ -9,12 +10,27 @@ export const Header = (props) => {
         setSearchName(event.target.value)
     }
 
+    const imagens = require.context('../../assets/img/imagesProducts/product1', false, /\.(png|jpe?g|svg)$/);
+
+const importarImagens = (imagens) => {
+  let imagensArray = [];
+  imagens.keys().forEach((caminho) => {
+    imagensArray.push(imagens(caminho));
+  });
+  return imagensArray;
+};
+
+const todasAsImagens = importarImagens(imagens);
+
+console.log(todasAsImagens);
     return (
         <BodyHeader>
-            <Logo src={logo} />
+            <LogoRocket/>
             <DivSearch>
+                <Rocket/>
                 <InputSearch id="nameProduct" placeholder={"Busque aqui seu produto"} onChange={handleInputChangeSearchName} />
                 <Search onClick={props.onChangeSetFilters} value={searchName} />
+                <Comet/>
             </DivSearch>
             <CartHeader handleSetShowCart={props.handleSetShowCart} />
         </BodyHeader>

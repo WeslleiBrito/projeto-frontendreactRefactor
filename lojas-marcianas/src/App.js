@@ -150,15 +150,16 @@ function App() {
   }
 
   return (
-    <>
+
+
+    <ContainerApp >
+      <GlobalStyle />
       <Header onChangeSetFilters={onChangeSetFilters} handleSetShowCart={handleSetShowCart} />
-      <ContainerApp className="App">
-        <GlobalStyle />
-        <Filters onChangeSetFilters={onChangeSetFilters} />
-        <Home products={listProducts} onChangeValueSelect={onChangeValueSelect} order={order} addCart={addCart} modifyIndexImage={modifyIndexImage}/>
-        {showCart ? <Cart cart={cart} addCart={addCart} amountCart={amountCart} removeProductCart={removeProductCart} showCart={showCart} /> : false}
-      </ContainerApp>
-    </>
+      <Filters onChangeSetFilters={onChangeSetFilters} />
+      <Home products={listProducts} onChangeValueSelect={onChangeValueSelect} order={order} addCart={addCart} modifyIndexImage={modifyIndexImage} />
+      {showCart ? <Cart cart={cart} addCart={addCart} amountCart={amountCart} removeProductCart={removeProductCart} showCart={showCart} /> : false}
+    </ContainerApp>
+
   );
 }
 
