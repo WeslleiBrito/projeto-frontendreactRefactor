@@ -67,3 +67,87 @@ export const productsStock = [
         indexImage: 0
     }
 ]
+
+export const productsStock2 = [
+    {
+        id: 1,
+        name: 'Camiseta Nasa Astronauta Masculina e Feminina 100% Algodão Primeira Linha Gola Redonda - Wintershop',
+        value: 49.90,
+        images: [],
+        indexImage: 0
+    },
+
+    {
+        id: 2,
+        name: 'CAMISETA MASCULINA OLHO DO UNIVERSO ESTAMPA DIGITAL',
+        value: 59.90,
+        images: [],
+        indexImage: 0
+    },
+
+    {
+        id: 3,
+        name: 'CAMISETA MASCULINA NAVES ESPACIAIS ESTAMPA DIGITAL',
+        value: 59.90,
+        images: [],
+        indexImage: 0
+    },
+
+    {
+        id: 4,
+        name: 'CAMISETA MASCULINA GALÁXIAS ESTAMPA DIGITAL',
+        value: 77.90,
+        images: [],
+        indexImage: 0
+    },
+
+    {
+        id: 5,
+        name: 'Camiseta astronomia- Astronauta - Inoctua',
+        value: 72.00,
+        images: [],
+        indexImage: 0
+    },
+
+    {
+        id: 6,
+        name: 'Camiseta Pai E Filho No Espaço Dos Astronautas Da Lua',
+        value: 123.95,
+        images: [],
+        indexImage: 0
+    },
+
+    {
+        id: 7,
+        name: 'Moletom ESPAÇO | Astronauta Franklin',
+        value: 170.70,
+        images: [],
+        indexImage: 0
+    },
+
+    {
+        id: 8,
+        name: 'Camiseta Astronauta Psychedelic Music DJ',
+        value: 122.50,
+        images: [],
+        indexImage: 0
+    },
+
+    {
+        id: 9,
+        name: 'Sistema Solar Camisas Espaciais Exteriores Acampam',
+        value: 115.70,
+        images: [],
+        indexImage: 0
+    },
+
+    {
+        id: 10,
+        name: 'Camiseta Planetas Cutos, Sistema Solar, Espaço, Cosmos, Gal',
+        value: 115.70,
+        images: [],
+        indexImage: 0
+    },
+
+
+]
