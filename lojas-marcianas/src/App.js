@@ -157,7 +157,7 @@ function App() {
       <Header onChangeSetFilters={onChangeSetFilters} handleSetShowCart={handleSetShowCart} />
       <Filters onChangeSetFilters={onChangeSetFilters} />
       <Home products={listProducts} onChangeValueSelect={onChangeValueSelect} order={order} addCart={addCart} modifyIndexImage={modifyIndexImage} />
-      {showCart ? <Cart cart={cart} addCart={addCart} amountCart={amountCart} removeProductCart={removeProductCart} showCart={showCart} /> : false}
+      {showCart ? <Cart cart={cart} addCart={addCart} amountCart={amountCart} removeProductCart={removeProductCart} showCart={showCart} setShowCart={handleSetShowCart} /> : false}
     </ContainerApp>
 
   );

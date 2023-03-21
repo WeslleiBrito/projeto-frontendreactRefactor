@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import close from "../../../assets/icons/close.svg"
 
 export const ContainerCart = styled.section`
     display: flex;
     flex-direction: column;
     position: absolute;
     left: 74.5%;
-    top: -6%;
+    top: 5%;
     width: 25vw;
     height: 60vh;
     margin: 0 auto; 
@@ -25,18 +26,42 @@ export const ContainerCart = styled.section`
     position: absolute;
     border-left: 3.5vh solid transparent;
     border-right: 3.5vh solid transparent;
-    /*Faz seta "apontar para baixo. Definir o valor como 'top' fará ela "apontar para cima" */
-    /*Aqui entra a cor da "aba" do balão */
     border-bottom: 3.5vh solid #A9A9A9;
-    top: -3.4vh; /*localização. Experimente alterar para 'bottom'*/
+    top: -3.4vh; 
     left: 70%;
     }
 `
 export const Text = styled.p`
     margin-top: 2vh;
 `
-
+export const Title = styled.h4`
+`
+export const HeaderCart = styled.section`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2vh;
+    margin-right: 2vh;
+`
 export const Itens = styled.aside`
     display: flex;
     flex-direction: column;
 `
+
+export const Close = (props) => {
+
+    const buttonStyle = {
+
+        background: "transparent",
+        backgroundImage: `url(${close})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center",
+        backgroundSize: "100% 100%",
+        height: "3vh",
+        width: "3vh",
+        border: "none",
+        borderRadius: "5px",
+    }
+
+    return <button style={buttonStyle} onClick={props.setShowCart} />
+} 

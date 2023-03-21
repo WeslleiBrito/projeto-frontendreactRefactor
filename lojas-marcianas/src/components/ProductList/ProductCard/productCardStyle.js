@@ -1,6 +1,5 @@
 
 import styled from "styled-components";
-import cartIcon from "../../../assets/icons/cart.svg"
 import arrowRight from "../../../assets/icons/arrowRight.svg"
 import arrowLeft from "../../../assets/icons/arrowLeft.svg"
 
@@ -54,7 +53,7 @@ export const ShoppingCart = (props) => {
 
     const buttonStyle = {
         background: "transparent",
-        backgroundImage: `url(${cartIcon})`,
+        backgroundImage: `url(${props.icon})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
         backgroundSize: "100% 100%",
@@ -66,7 +65,7 @@ export const ShoppingCart = (props) => {
     };
 
     return (
-        <button style={buttonStyle} id={props.name} onClick={(event) => props.addCart(event, 0, 1)} />
+        <button style={buttonStyle} id={props.name} onClick={(event) => { props.addCart(event, 0, 1); props.handleSetIconCart() }} />
     )
 
 }
