@@ -6,14 +6,23 @@ import add from "../../../assets/icons/add.svg"
 
 
 export const Text = styled.p`
-    
+    font-size: 0.8em;
 `
 export const Item = styled.li`
-    display: flex;
-    flex-direction: column;
-    margin-top: 2vh;
+    display: grid;
+    grid-template-columns: 12vh 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: orange;
+    height: 15vh;
+    border-radius: 1em;
+    margin-bottom: 2vh;
 `
 
+export const Description = styled.section`
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+
+`
 
 export const Quantity = styled.input`
     text-align: center;
@@ -29,6 +38,8 @@ export const Quantity = styled.input`
 export const Modify = styled.section`
     display: flex;
     align-items: center;
+    margin-top: 2vh;
+    justify-content: space-around;
 `
 
 export const Values = styled.section`
@@ -36,10 +47,8 @@ export const Values = styled.section`
     justify-content: space-around;
 `
 
-export const ValueUnitProduct = styled.h5`
-`
-
 export const Amount = styled.h5`
+
 `
 
 export const ButtonRemove = (props) => {
@@ -54,8 +63,7 @@ export const ButtonRemove = (props) => {
         width: "4vh",
         border: "none",
         borderRadius: "5px",
-
-        cursor: "pointer"
+        marginLeft: '0.3vw'
     };
 
     return (
@@ -76,8 +84,6 @@ export const ButtonReduce = (props) => {
         width: "2.6vh",
         border: "none",
         borderRadius: "5px",
-
-        cursor: "pointer"
     }
 
     return (
@@ -108,8 +114,21 @@ export const ButtonAdd = (props) => {
 }
 
 export const QuantitySection = styled.section`
-    width: 80%;
     display: flex;
     gap: 0.5vw;
     align-items: center;
 `
+
+export const Photograph = (props) => {
+
+    const stylePhotograph = {
+        width: '100%',
+        height: '100%',
+        gridColumn: '1/2',
+        gridRow: '1/3', 
+        paddingTop: '1vh',
+        paddingBottom: '1vh'
+    } 
+
+    return <img src={props.src} alt="foto do produto" style={stylePhotograph}/>
+}

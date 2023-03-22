@@ -9,7 +9,6 @@ export const ContainerCart = styled.section`
     top: 5%;
     width: 25vw;
     height: 60vh;
-    margin: 0 auto; 
     background: #A9A9A9;
     font-family: 'open sans';
     font-size: 0.85em;
@@ -18,6 +17,7 @@ export const ContainerCart = styled.section`
     color: #1C1C1C;
     padding: 1.5vw;
     margin-top: 30px;
+    
 
     ::before{
         content: "";
