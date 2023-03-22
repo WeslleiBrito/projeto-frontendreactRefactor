@@ -125,10 +125,9 @@ export const Photograph = (props) => {
         width: '100%',
         height: '100%',
         gridColumn: '1/2',
-        gridRow: '1/3', 
-        paddingTop: '1vh',
-        paddingBottom: '1vh'
-    } 
+        gridRow: '1/3',
+        padding: '2vh 1vh 2vh 1vh',
+    }
 
-    return <img src={props.src} alt="foto do produto" style={stylePhotograph}/>
+    return <img src={props.src} alt="foto do produto" style={stylePhotograph} />
 }
