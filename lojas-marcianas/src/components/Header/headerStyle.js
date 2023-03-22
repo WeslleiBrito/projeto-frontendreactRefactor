@@ -35,11 +35,11 @@ export const LogoRocket = () => {
     const styleLogoRocket = {
         height: '15vh',
         width: '15vh',
-       
+
     }
 
-    return(
-        <img src={imageLogo} style={styleLogoRocket} alt="Logo do foguete"/>
+    return (
+        <img src={imageLogo} style={styleLogoRocket} alt="Logo do foguete" />
     )
 }
 
@@ -69,10 +69,10 @@ export const Rocket = () => {
         position: 'absolute',
         transform: 'rotate(70deg)',
         left: '-3vw',
-     
+
     }
-    return(
-        <img src={rocket} style={styleRocket} alt="Foguete"/>
+    return (
+        <img src={rocket} style={styleRocket} alt="Foguete" />
     )
 }
 
@@ -93,10 +93,10 @@ export const Comet = () => {
         transform: 'rotate(15deg)',
         left: '29vw',
         bottom: '0.1vh',
-    
+
     }
-    return(
-        <img src={comet} style={styleRocket} alt="Cometa"/>
+    return (
+        <img src={comet} style={styleRocket} alt="Cometa" />
     )
 }
 
@@ -135,6 +135,6 @@ export const Search = (props) => {
     };
 
     return (
-        <button style={buttonStyle} onClick={() => props.onClick(null, props.value)} />
+        <button style={buttonStyle} onClick={props.click} value={props.value} id={"nameProduct"} />
     )
 }

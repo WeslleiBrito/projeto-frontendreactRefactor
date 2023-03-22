@@ -17,7 +17,7 @@ export const Header = (props) => {
             <DivSearch>
                 <Rocket />
                 <InputSearch id="nameProduct" placeholder={"Busque aqui seu produto"} onChange={handleInputChangeSearchName} />
-                <Search onClick={props.onChangeSetFilters} value={searchName} />
+                <Search click={props.onChangeSetFilters} value={searchName} />
                 <Comet />
             </DivSearch>
             <CartHeader handleSetShowCart={props.handleSetShowCart} />

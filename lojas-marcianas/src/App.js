@@ -25,6 +25,7 @@ function App() {
   const [cart, setCart] = useState(recoverStorageCart() ? recoverStorageCart() : [])
   const [listProducts, setListProducts] = useState([...productsStock])
   const [showCart, setShowCart] = useState(false)
+  const [quantityResult, setQuantityResult] = useState(listProducts.length)
 
   useEffect(() => {
     const newStock = productsStock.filter((product) => {
@@ -34,7 +35,7 @@ function App() {
         return filters.maxValue ? product.value <= filters.maxValue : product
       })
       .filter((product) => {
-        return product.name.toLocaleLowerCase().includes(filters.nameProduct.toLocaleLowerCase())
+        return product.name.toLowerCase().includes(filters.nameProduct.toLowerCase())
       })
       .sort((a, b) => {
         if (order === "crescent") {
@@ -49,8 +50,11 @@ function App() {
       },)
 
     setListProducts(newStock)
-
   }, [filters, order])
+
+  useEffect(() => {
+    setQuantityResult(listProducts.length)
+  }, [listProducts])
 
   const onChangeSetFilters = (event, value) => {
 
@@ -61,6 +65,11 @@ function App() {
       setFilters({ ...Filters, nameProduct: value })
     }
 
+  }
+
+  const toCleanFilters = () => {
+    setFilters({ ...filters, minValue: "", maxValue: "", nameProduct: "" })
+    setOrder('')
   }
 
   const amountCart = cart.reduce((accumulator, product) => {
@@ -154,9 +163,9 @@ function App() {
 
     <ContainerApp >
       <GlobalStyle />
-      <Header onChangeSetFilters={onChangeSetFilters} handleSetShowCart={handleSetShowCart} />
-      <Filters onChangeSetFilters={onChangeSetFilters} />
-      <Home products={listProducts} onChangeValueSelect={onChangeValueSelect} order={order} addCart={addCart} modifyIndexImage={modifyIndexImage} />
+      <Header onChangeSetFilters={onChangeSetFilters} handleSetShowCart={handleSetShowCart} filters={filters} />
+      <Filters filters={filters} onChangeSetFilters={onChangeSetFilters} toCleanFilters={toCleanFilters} onChangeValueSelect={onChangeValueSelect} order={order} quantityResult={quantityResult} />
+      <Home products={listProducts} addCart={addCart} modifyIndexImage={modifyIndexImage} />
       {showCart ? <Cart cart={cart} addCart={addCart} amountCart={amountCart} removeProductCart={removeProductCart} showCart={showCart} setShowCart={handleSetShowCart} /> : false}
     </ContainerApp>
 
