@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
-export const ContainerHome = styled.main`
+export const ContainerHome = styled.section`
     display: flex;
     flex-direction: column;
     padding: 0 1vw 0 1vw;
-    margin-top: 5vh;
     width: 100%;
 
 `
@@ -29,5 +28,4 @@ export const Cards = styled.ul`
     row-gap: 5vh;
     column-gap: 5vh;
     align-self: center;
-    margin-top: 8vh;
 `

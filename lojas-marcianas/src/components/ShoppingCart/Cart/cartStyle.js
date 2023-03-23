@@ -9,14 +9,14 @@ export const ContainerCart = styled.section`
     top: 5%;
     width: 30vw;
     height: 70vh;
-    background: #A9A9A9;
+    background: #1e6264;
     font-family: 'open sans';
     font-size: 0.85em;
     line-height: 1.6em;  
-    border-radius: 15px;
+    border-radius: 1em;
     color: #1C1C1C;
     padding: 1.5vw;
-    margin-top: 30px;
+    margin-top: 5vh;
     justify-content: center;
     
 
@@ -27,7 +27,7 @@ export const ContainerCart = styled.section`
     position: absolute;
     border-left: 3.5vh solid transparent;
     border-right: 3.5vh solid transparent;
-    border-bottom: 3.5vh solid #A9A9A9;
+    border-bottom: 3.5vh solid #1e6264;
     top: -3.4vh; 
     left: 76.5%;
     }
@@ -56,6 +56,7 @@ export const Itens = styled.ul`
     padding-left: 0.5vw;
     padding-right: 0.5vw;
     align-self: center;
+    background-color: orangered;
    
 `
 

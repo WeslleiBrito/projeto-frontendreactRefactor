@@ -1,7 +1,7 @@
+import { Header } from './components/Header/Header';
 import { Filters } from './components/Filters/Filters'
 import { Home } from './components/ProductList/Home/Home';
 import { Cart } from './components/ShoppingCart/Cart/Cart';
-import { Header } from './components/Header/Header';
 import { GlobalStyle } from './GlobalStyle'
 import { ContainerApp } from './components/styleApp';
 import { productsStock } from './assets/productsList';

@@ -18,6 +18,8 @@ export const BodyHeader = styled.header`
     justify-content: space-between;
     padding-left: 10vh;
     padding-right: 10vh;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
 
 `
 

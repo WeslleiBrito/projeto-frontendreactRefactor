@@ -6,8 +6,10 @@ import add from "../../../assets/icons/add.svg"
 
 
 export const Text = styled.p`
-    font-size: 0.9em;
+  
+    font-family: sans-serif;
     font-weight: 700;
+    font-size: 0.9em;
     grid-column: 2/3;
     grid-row: 1/2;
 `

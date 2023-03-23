@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { BodyHeader, InputSearch, DivSearch, CartHeader, Search, Rocket, Comet, LogoRocket } from "./headerStyle"
+import { BodyHeader, InputSearch, DivSearch, CartHeader, Search, Rocket, LogoRocket } from "./headerStyle"
 
 
 
@@ -18,7 +18,6 @@ export const Header = (props) => {
                 <Rocket />
                 <InputSearch id="nameProduct" placeholder={"Busque aqui seu produto"} onChange={handleInputChangeSearchName} />
                 <Search click={props.onChangeSetFilters} value={searchName} />
-                <Comet />
             </DivSearch>
             <CartHeader handleSetShowCart={props.handleSetShowCart} />
         </BodyHeader>

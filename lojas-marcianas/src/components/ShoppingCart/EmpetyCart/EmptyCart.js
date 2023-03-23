@@ -1,7 +1,8 @@
-
+import { ImageMeditation } from './styleEmptyCart'
+import meditationImage from '.././../../assets/img/meditacao.png'
 
 export const EmptyCart = () => {
-    return(
-        <p>Carrinho Vazio</p>
+    return (
+        <ImageMeditation src={meditationImage} />
     )
 }

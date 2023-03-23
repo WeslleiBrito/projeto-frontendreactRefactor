@@ -6,6 +6,8 @@ export const ContainerFilters = styled.section`
     width: 100%;
     align-items: center;
     flex-direction: column;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3
 `
 
 export const Titles = styled.div``
