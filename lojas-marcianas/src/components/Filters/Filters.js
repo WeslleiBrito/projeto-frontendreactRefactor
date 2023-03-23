@@ -12,6 +12,10 @@ export const Filters = (props) => {
             }
         }
 
+        if(props.order){
+            result = true
+        }
+        
         return result
     }
 
