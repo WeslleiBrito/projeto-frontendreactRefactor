@@ -6,21 +6,30 @@ import add from "../../../assets/icons/add.svg"
 
 
 export const Text = styled.p`
-    font-size: 0.8em;
+    font-size: 0.9em;
+    font-weight: 700;
+    grid-column: 2/3;
+    grid-row: 1/2;
 `
 export const Item = styled.li`
     display: grid;
     grid-template-columns: 12vh 1fr;
     grid-template-rows: 1fr 1fr;
-    background-color: orange;
     height: 15vh;
     border-radius: 1em;
     margin-bottom: 2vh;
+    align-items: center;
 `
 
 export const Description = styled.section`
     grid-column: 2 / 3;
-    grid-row: 1 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: center;
+    margin-top: 1vh;
+    justify-content: space-between;
+    margin-left: 1vw;
+    margin-right: 1vw;
 
 `
 
@@ -35,20 +44,9 @@ export const Quantity = styled.input`
     }
 `
 
-export const Modify = styled.section`
-    display: flex;
-    align-items: center;
-    margin-top: 2vh;
-    justify-content: space-around;
-`
-
-export const Values = styled.section`
-    display: flex;
-    justify-content: space-around;
-`
-
 export const Amount = styled.h5`
-
+    font-size: 0.9em;
+    font-weight: 700;
 `
 
 export const ButtonRemove = (props) => {

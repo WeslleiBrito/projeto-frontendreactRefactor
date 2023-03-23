@@ -26,7 +26,7 @@ const product12 = require.context('./img/imagesProducts/product12', false, /\.(p
 export const productsStock = [
     {
         id: 1,
-        name: 'Camiseta Nasa Astronauta Masculina e Feminina 100% Algodão Primeira Linha Gola Redonda - Wintershop',
+        name: 'Camiseta Nasa Astronauta 100% Algodão Primeira Linha',
         value: 49.90,
         images: importarImagens(product1),
         indexImage: 0
@@ -42,7 +42,7 @@ export const productsStock = [
 
     {
         id: 3,
-        name: 'Camiseta Teóricos dos Astronautas Antigos Dizem Teoria da A',
+        name: 'Camiseta Teóricos dos Astronautas',
         value: 146.10,
         images: importarImagens(product3),
         indexImage: 0
@@ -50,7 +50,7 @@ export const productsStock = [
 
     {
         id: 4,
-        name: 'Camiseta Tributo de Rover Oppy da oportunidade de Marte',
+        name: 'Camiseta Tributo de Rover Oppy',
         value: 119.05,
         images: importarImagens(product4),
         indexImage: 0
@@ -58,7 +58,7 @@ export const productsStock = [
 
     {
         id: 5,
-        name: 'Camiseta ESPAÇO | Astronauta do Snoopy',
+        name: 'Camiseta ESPAÇO Astronauta do Snoopy',
         value: 160.70,
         images: importarImagens(product5),
         indexImage: 0
@@ -66,7 +66,7 @@ export const productsStock = [
 
     {
         id: 6,
-        name: 'Camiseta Pai E Filho No Espaço Dos Astronautas Da Lua',
+        name: 'Camiseta Espaço Dos Astronautas Da Lua',
         value: 123.95,
         images: importarImagens(product6),
         indexImage: 0
@@ -74,7 +74,7 @@ export const productsStock = [
 
     {
         id: 7,
-        name: 'Moletom ESPAÇO | Astronauta Franklin',
+        name: 'Moletom ESPAÇO Astronauta Franklin',
         value: 170.70,
         images: importarImagens(product7),
         indexImage: 0
@@ -90,7 +90,7 @@ export const productsStock = [
 
     {
         id: 9,
-        name: 'Sistema Solar Camisas Espaciais Exteriores Acampam',
+        name: 'Sistema Solar Camisas Espaciais Exteriores',
         value: 115.70,
         images: importarImagens(product9),
         indexImage: 0
@@ -98,7 +98,7 @@ export const productsStock = [
 
     {
         id: 10,
-        name: 'Camiseta Planetas Cutos, Sistema Solar, Espaço, Cosmos, Gal',
+        name: 'Camiseta Espaço Cosmos',
         value: 79.80,
         images: importarImagens(product10),
         indexImage: 0
@@ -106,7 +106,7 @@ export const productsStock = [
 
     {
         id: 11,
-        name: 'Camiseta Camisa-T do Unicórnio Andando por Astronauta',
+        name: 'Camiseta Camisa-T do Unicórnio',
         value: 160.70,
         images: importarImagens(product11),
         indexImage: 0
@@ -119,7 +119,7 @@ export const productsStock = [
         images: importarImagens(product12),
         indexImage: 0
     },
-   
+
 
 
 ]

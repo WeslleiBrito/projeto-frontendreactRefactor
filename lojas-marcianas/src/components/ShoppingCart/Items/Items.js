@@ -1,4 +1,4 @@
-import { Text, Item, Quantity, Modify, Amount, ButtonRemove, ButtonAdd, ButtonReduce, Description, QuantitySection, Photograph } from "./itemStyle"
+import { Text, Item, Quantity, Amount, ButtonRemove, ButtonAdd, ButtonReduce, Description, QuantitySection, Photograph } from "./itemStyle"
 import { coinBrl } from "../../ProductList/Home/Home"
 import { useEffect, useState } from "react"
 
@@ -33,26 +33,25 @@ export const Items = (props) => {
     useEffect(() => { setInputQuantity(quantity) }, [quantity])
 
     return (
-            <Item>
-                    <Photograph src={photograph}/>
-                    <Description>
-                        <Text>{nameProduct.length >= 40 ? nameProduct.toUpperCase().slice(0, 39) : nameProduct.toUpperCase().slice(0, nameProduct.length - 1)}</Text>
-                        <Modify>
-                            <QuantitySection>
-                                <ButtonAdd id={id} handleInputQuantity={handleInputQuantity} />
-                                <Quantity type={'number'} value={inputQuantity} onChange={handleInputQuantity} id={id} min={1} />
-                                <ButtonReduce id={id} handleInputQuantity={handleInputQuantity} />
-                                <ButtonRemove id={id} removeProductCart={removeProductCart} />
-                            </QuantitySection>
-                            
-                            <Amount>{coinBrl(amount)}</Amount>
-                            
-                        </Modify>
-                        
-                    </Description>
-          
-                
+        <Item>
 
-            </Item>
+            <Photograph src={photograph} />
+
+            <Text>{nameProduct}</Text>
+
+            <Description>
+
+                <QuantitySection>
+                    <ButtonAdd id={id} handleInputQuantity={handleInputQuantity} />
+                    <Quantity type={'number'} value={inputQuantity} onChange={handleInputQuantity} id={id} min={1} />
+                    <ButtonReduce id={id} handleInputQuantity={handleInputQuantity} />
+                    <ButtonRemove id={id} removeProductCart={removeProductCart} />
+                </QuantitySection>
+
+                <Amount>{coinBrl(amount)}</Amount>
+
+            </Description>
+
+        </Item>
     )
 }

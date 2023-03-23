@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Card, Image, NameProduct, PriceProduct, SectionPrice, ArrowLeft, ArrowRight, ShoppingCart, ImagesItem } from "./productCardStyle"
+import { Card, Image, NameProduct, PriceProduct, SectionDescription, ArrowLeft, ArrowRight, ShoppingCart, ImagesItem, Action } from "./productCardStyle"
 import cartIcon from "../../../assets/icons/cart.svg"
 import checkCart from "../../../assets/icons/checkCart.gif"
 
@@ -26,11 +26,17 @@ export const ProductCard = (props) => {
                     <Image src={props.image} alt="Foto do produto" />
                     <ArrowRight id={props.idItem} modifyIndexImage={props.modifyIndexImage} />
                 </ImagesItem>
-                <NameProduct>{props.name}</NameProduct>
-                <SectionPrice>
-                    <PriceProduct>{props.value}</PriceProduct>
-                    <ShoppingCart addCart={props.addCart} name={props.idItem} icon={iconOfCart} handleSetIconCart={handleSetIconCart} />
-                </SectionPrice>
+
+                <SectionDescription>
+
+                    <NameProduct>{props.name}</NameProduct>
+
+                    <Action>
+                        <PriceProduct>{props.value}</PriceProduct>
+                        <ShoppingCart addCart={props.addCart} name={props.idItem} icon={iconOfCart} handleSetIconCart={handleSetIconCart} />
+                    </Action>
+
+                </SectionDescription>
 
             </Card>
 

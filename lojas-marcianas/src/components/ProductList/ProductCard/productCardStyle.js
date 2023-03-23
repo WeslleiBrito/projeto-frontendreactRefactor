@@ -17,7 +17,6 @@ export const ArrowLeft = (props) => {
         width: "6vh",
         border: "none",
         borderRadius: "5px",
-        cursor: "pointer",
     };
 
     return (
@@ -40,7 +39,6 @@ export const ArrowRight = (props) => {
         width: "6vh",
         border: "none",
         borderRadius: "5px",
-        cursor: "pointer",
     };
 
     return (
@@ -61,7 +59,6 @@ export const ShoppingCart = (props) => {
         width: "4vh",
         border: "none",
         borderRadius: "5px",
-        cursor: "pointer"
     };
 
     return (
@@ -71,21 +68,16 @@ export const ShoppingCart = (props) => {
 }
 
 export const Card = styled.li`
-    height: 63vh;
-    width: 20vw;
+    height: 65vh;
+    width: 18vw;
     display: flex;
     flex-direction: column;
     align-content: center;
     border-radius: 1em;
     padding-top: 1vh;
-
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
 
     &:hover {
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
         transform: translateY(-2vh);
     }
 `
@@ -94,27 +86,41 @@ export const ImagesItem = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 48vh;
+    margin-bottom: 1.5vh;
+
 `
-export const SectionPrice = styled.section`
-  display: flex;
+export const SectionDescription = styled.section`
+  display: grid;
   justify-content: space-around;
-  gap: 2vw;
-  margin-top: 5.5vh;
-  margin-right: 1vw;
-  
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr;
+  grid-row-gap: 3vh;
+  border-radius: 0.5em;
 `
 
 export const Image = styled.img`
     height: 45vh;
-    width: 97%;
+    width: 18vw;
+    border-radius: 1em;
 `
 export const NameProduct = styled.p`
     text-align: justify;
     font-weight: 700;
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
-    height: 6vh;
+    height: 10vh;
+    width: 18vw;
+    color: white;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; 
+
 `
 export const PriceProduct = styled.p`
-    
+    font-weight: 900;
+    color: #051937;
+  
+`
+export const Action = styled.div`
+    display: flex;
+    justify-content: space-around;
+    gap: 3.5vw;
 `
