@@ -1,4 +1,4 @@
-import { EmptyCart } from "../EmpetyCart/EmptyCart"
+import { EmptyCart } from "../EmptyCart/EmptyCart"
 import { FullCart } from "../FullCart/FullCart"
 import { ContainerCart, Text, Itens, Close, Title, HeaderCart } from "./cartStyle"
 import { coinBrl } from "../../ProductList/Home/Home"

@@ -28,8 +28,8 @@ export const ContainerCart = styled.section`
     border-left: 3.5vh solid transparent;
     border-right: 3.5vh solid transparent;
     border-bottom: 3.5vh solid #1e6264;
-    top: -3.4vh; 
-    left: 76.5%;
+    top: -3.3vh; 
+    left: 76.8%;
     }
 `
 export const Text = styled.p`
@@ -47,16 +47,14 @@ export const HeaderCart = styled.section`
     margin-right: 2vh;
 `
 export const Itens = styled.ul`
-    display: flex;
-    flex-direction: column;
+    display: grid;
     margin-top: 2vh;
     height: 51vh;
     width: 25vw;
     overflow-y: auto;
     padding-left: 0.5vw;
     padding-right: 0.5vw;
-    align-self: center;
-    background-color: orangered;
+ 
    
 `
 

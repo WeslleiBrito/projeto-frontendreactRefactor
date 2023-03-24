@@ -39,7 +39,6 @@ export const ArrowRight = (props) => {
         height: "6vh",
         width: "6vh",
         border: "none",
-        borderRadius: "5px",
     };
 
     return (
@@ -59,7 +58,6 @@ export const ShoppingCart = (props) => {
         height: "4vh",
         width: "4vh",
         border: "none",
-        borderRadius: "5px",
     };
 
     return (
@@ -116,7 +114,7 @@ export const NameProduct = styled.p`
 
     font-family: 'Delicious', sans-serif;
     text-align: justify;
-    height: 10vh;
+    height: 7vh;
     width: 18vw;
     color: white;
     grid-column: 1 / 2;
