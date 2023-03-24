@@ -2,8 +2,7 @@ import styled from "styled-components";
 import close from "../../../assets/icons/close.svg"
 
 export const ContainerCart = styled.section`
-    display: flex;
-    flex-direction: column;
+    display: grid;
     position: absolute;
     left: 69%;
     top: 5%;
@@ -35,10 +34,12 @@ export const ContainerCart = styled.section`
 export const Text = styled.p`
     margin-top: 2vh;
     display: flex;
-    align-self: flex-start;
+    justify-self: end;
+    font-size: 1rem;
+    font-weight: 900;
+    color: beige;
 `
-export const Title = styled.h4`
-`
+
 export const HeaderCart = styled.section`
     display: flex;
     justify-content: space-between;
@@ -47,14 +48,16 @@ export const HeaderCart = styled.section`
     margin-right: 2vh;
 `
 export const Itens = styled.ul`
-    display: grid;
+    display: flex;
+    flex-direction: column;
     margin-top: 2vh;
-    height: 51vh;
-    width: 25vw;
+    height: 51.5vh;
+    width: 26vw;
     overflow-y: auto;
     padding-left: 0.5vw;
     padding-right: 0.5vw;
- 
+    padding-top: 0.5vh;
+    align-items: center;
    
 `
 

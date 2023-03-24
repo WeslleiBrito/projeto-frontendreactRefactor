@@ -4,7 +4,7 @@ export const ContainerHome = styled.section`
     display: flex;
     flex-direction: column;
     padding: 0 1vw 0 1vw;
-    width: 100%;
+    width: 69vw;
 
 `
 
@@ -29,4 +29,6 @@ export const Cards = styled.ul`
     column-gap: 5vh;
     align-self: center;
     margin-top: 4vh;
+    width: 100%;
+    justify-content: center;
 `

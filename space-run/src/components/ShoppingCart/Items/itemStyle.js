@@ -8,10 +8,11 @@ import add from "../../../assets/icons/add.svg"
 export const Text = styled.p`
   
     font-family: sans-serif;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 0.9em;
     grid-column: 2/3;
     grid-row: 1/2;
+    
 `
 export const Item = styled.li`
     display: grid;
@@ -21,6 +22,13 @@ export const Item = styled.li`
     border-radius: 1em;
     margin-bottom: 2vh;
     align-items: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 0.5vh 0;
+    width: 23vw;
+    justify-content: start;
+    &:hover{
+        transform: scale(1.02)
+    }
 `
 
 export const Description = styled.section`
@@ -39,7 +47,10 @@ export const Quantity = styled.input`
     text-align: center;
     width: 3vw;
     border-radius: 0.3em;
+    border: none;
     height: 4vh;
+    outline: none;
+    text-align: center;
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
         -webkit-appearance: none;
@@ -48,7 +59,9 @@ export const Quantity = styled.input`
 
 export const Amount = styled.h5`
     font-size: 0.9em;
-    font-weight: 700;
+    font-weight: 900;
+    display: flex;
+    align-self: end;
 `
 
 export const ButtonRemove = (props) => {

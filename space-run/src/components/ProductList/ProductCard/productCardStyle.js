@@ -2,7 +2,6 @@
 import styled from "styled-components";
 import arrowRight from "../../../assets/icons/arrowRight.svg"
 import arrowLeft from "../../../assets/icons/arrowLeft.svg"
-import delicious from '../../../assets/fonts/DeliciousHandrawn-Regular.ttf'
 
 export const ArrowLeft = (props) => {
     const buttonStyle = {
@@ -105,20 +104,17 @@ export const Image = styled.img`
 `
 export const NameProduct = styled.p`
 
-    @font-face {
-        font-family: 'Delicious';
-        src: url(${delicious}) format('truetype');
-        font-weight: 900;
-        font-style: oblique;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-    font-family: 'Delicious', sans-serif;
+    font-family: 'Pacifico', cursive;;
     text-align: justify;
+    font-size: 0.85rem;
     height: 7vh;
     width: 18vw;
     color: white;
     grid-column: 1 / 2;
     grid-row: 1 / 2; 
+
 
 `
 export const PriceProduct = styled.p`

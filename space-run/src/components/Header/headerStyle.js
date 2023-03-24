@@ -3,11 +3,6 @@ import React from "react";
 import styled from "styled-components";
 import cartHeader from "../../assets/icons/cartHeader.svg"
 import search from "../../assets/icons/search.svg"
-import imageLogo from "../../assets/img/astronaut3.png"
-import rocket from "../../assets/img/rocket.gif"
-import comet from "../../assets/img/comet.gif"
-
-
 
 
 export const BodyHeader = styled.header`
@@ -23,25 +18,17 @@ export const BodyHeader = styled.header`
 
 `
 
-export const Logo = styled.div`
-    background-image: url(${imageLogo});
-    height: 20vh;
-    width: 25vh;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+export const LogoRocket = ({ src, hovering, handleMouseOver, handleMouseOut }) => {
 
-    
-`
-export const LogoRocket = () => {
     const styleLogoRocket = {
         height: '15vh',
         width: '15vh',
-
+        transition: 'transform 0.2s',
+        transform: hovering ? 'scale(1.1)' : 'scale(1)'
     }
 
     return (
-        <img src={imageLogo} style={styleLogoRocket} alt="Logo do foguete" />
+        <img src={src} style={styleLogoRocket} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} alt="Logo do foguete" />
     )
 }
 
@@ -60,11 +47,9 @@ export const DivSearch = styled.div`
     border-left: 0.1em;
     border-style: solid;
     border-color: #ffc051;
-    
-
 `
 
-export const Rocket = () => {
+export const Rocket = ({ src }) => {
     const styleRocket = {
         height: '13vh',
         width: '15vh',
@@ -74,7 +59,7 @@ export const Rocket = () => {
 
     }
     return (
-        <img src={rocket} style={styleRocket} alt="Foguete" />
+        <img src={src} style={styleRocket} alt="Foguete" />
     )
 }
 
@@ -86,21 +71,6 @@ export const InputSearch = styled.input`
     outline: none;
     padding-left: 1vw;
 `
-
-export const Comet = () => {
-    const styleRocket = {
-        height: '13vh',
-        width: '15vh',
-        position: 'absolute',
-        transform: 'rotate(15deg)',
-        left: '29vw',
-        bottom: '0.1vh',
-
-    }
-    return (
-        <img src={comet} style={styleRocket} alt="Cometa" />
-    )
-}
 
 export const CartHeader = (props) => {
 

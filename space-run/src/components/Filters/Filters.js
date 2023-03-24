@@ -12,14 +12,13 @@ export const Filters = (props) => {
             }
         }
 
-        if(props.order){
+        if (props.order) {
             result = true
         }
-        
+
         return result
     }
 
-    console.log(verifyFilters())
     return (
         <ContainerFilters>
 
@@ -35,9 +34,9 @@ export const Filters = (props) => {
             <FilterValues>
                 <Lable>Valor:</Lable>
                 <ImputValue id="minValue" placeholder={"Mínimo"} onChange={onChangeSetFilters} value={filters.minValue} type="number" />
-                <Line/>
+                <Line />
                 <ImputValue id="maxValue" placeholder={"Máximo"} onChange={onChangeSetFilters} value={filters.maxValue} type="number" />
-                
+
             </FilterValues>
             <ButtonClear onClick={toCleanFilters} disabled={!verifyFilters()} >Limpar Filtros</ButtonClear>
             <QuantityResults>Quantidade de Produtos: {props.quantityResult} </QuantityResults>

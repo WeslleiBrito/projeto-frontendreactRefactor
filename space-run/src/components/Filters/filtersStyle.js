@@ -5,14 +5,12 @@ export const ContainerFilters = styled.section`
     display: flex;
     flex-direction: column;
     height: 30vh;
-    width: 17vw;
+    width: 18vw;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     margin-left: 1vw;
     margin-top: 4vh;
 `
-
-export const Titles = styled.div``
 
 export const CleanFilter = (props) => {
     const styleClean = {
@@ -46,7 +44,7 @@ export const SelectOrdination = styled.select`
 `
 
 export const Lable = styled.label`
-    width: 4vw;
+    width: 5vw;
 `
 export const OptiosOrdinatin = styled.option`
     text-align: center;
@@ -84,11 +82,12 @@ export const ButtonClear = styled.button`
     justify-content: center;
     background-color: silver;
     border-radius: 0.5em;
-    transition: background-color 0.5s ease;
-    margin-left: 1vw;
+    transition: all 0.4s ease-in-out;
+    margin-left: 2vw;
 
     &:hover{
-        background-color: rebeccapurple;
+        transform: scale(1.1);
+        background-color: rgba(10, 143, 231, 0.5);
         color: white;
     }
     

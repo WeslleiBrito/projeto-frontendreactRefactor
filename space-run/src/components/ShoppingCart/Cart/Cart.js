@@ -1,6 +1,6 @@
 import { EmptyCart } from "../EmptyCart/EmptyCart"
 import { FullCart } from "../FullCart/FullCart"
-import { ContainerCart, Text, Itens, Close, Title, HeaderCart } from "./cartStyle"
+import { ContainerCart, Text, Itens, Close, HeaderCart } from "./cartStyle"
 import { coinBrl } from "../../ProductList/Home/Home"
 
 export const Cart = ({ cart, addCart, amountCart, removeProductCart, setShowCart }) => {
@@ -9,7 +9,7 @@ export const Cart = ({ cart, addCart, amountCart, removeProductCart, setShowCart
         <ContainerCart>
 
             <HeaderCart>
-                <Title>Carrinho</Title>
+                <Text>Carrinho</Text>
                 <Close setShowCart={setShowCart} />
             </HeaderCart>
 
