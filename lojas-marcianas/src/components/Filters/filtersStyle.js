@@ -38,7 +38,7 @@ export const Order = styled.div`
 `
 
 export const SelectOrdination = styled.select`
-    width: 14vh;
+    width: 12vw;
     height: 4vh;
     outline: none;
     border-radius: 0.3em;

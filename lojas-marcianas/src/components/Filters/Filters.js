@@ -19,6 +19,7 @@ export const Filters = (props) => {
         return result
     }
 
+    console.log(verifyFilters())
     return (
         <ContainerFilters>
 
@@ -38,9 +39,7 @@ export const Filters = (props) => {
                 <ImputValue id="maxValue" placeholder={"Máximo"} onChange={onChangeSetFilters} value={filters.maxValue} type="number" />
                 
             </FilterValues>
-            {verifyFilters() ? <ButtonClear onClick={toCleanFilters}>Limpar Filtros</ButtonClear> : false}
-            
-
+            <ButtonClear onClick={toCleanFilters} disabled={!verifyFilters()} >Limpar Filtros</ButtonClear>
             <QuantityResults>Quantidade de Produtos: {props.quantityResult} </QuantityResults>
 
         </ContainerFilters>
